@@ -1,28 +1,28 @@
 {
-  "author": "WeAreAthlon <hello@weareathlon.com> (https://www.weareathlon.com)",
-  "name": "@weareathlon/frontend-webpack-boilerplate",
+  "author": "Egor F",
+  "name": "frontend-webpack5-boilerplate",
   "version": "5.11.0",
   "description": "Starter project template boilerplate based on Webpack with SASS/PostCSS and babel ES6/7 support.",
-  "homepage": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate#readme",
+  "homepage": "https://github.com",
   "browserslist": [
     "last 2 versions",
     "> 5%"
   ],
   "bugs": {
-    "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
-    "email": "plamen@athlonsofia.com"
+    "url": "https://github.com/",
+    "email": "egor@burburo.ru"
   },
   "contributors": [
     {
-      "name": "Plamen Nikolov",
-      "email": "me@pnikoloff.com",
-      "url": "https://pnikoloff.com"
+      "name": "Egor Feofanov",
+      "email": "egor@burburo.ru",
+      "url": "https://github.com/"
     }
   ],
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.1.0",
@@ -41,11 +41,12 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
     "mini-css-extract-plugin": "^2.4.4",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.6",
     "postcss-loader": "^6.2.0",
     "sass": "^1.43.4",
     "sass-lint": "^1.13.1",
     "sass-loader": "^12.3.0",
+    "tailwindcss": "^3.0.22",
     "terser-webpack-plugin": "^5.2.5",
     "webpack": "^5.64.0",
     "webpack-bundle-analyzer": "^4.5.0",
@@ -66,7 +67,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:WeAreAthlon/frontend-webpack-boilerplate.git"
+    "url": ""
   },
   "scripts": {
     "build": "webpack --config configuration/webpack.dev.config.js --mode=development",

@@ -7,14 +7,20 @@
 /* Paths */
 /* Grid setup */
 /* Colour palette */
-$black: #000;
-$white: #fff;
-$light-gray: #f1f1f1;
-
-$body-background-color: #333;
-$foreground-color: #fff;
-$caption-color: #464646;
-$accent-color: #999;
-$link-color: #ec1f4e;
-
+:root {
+    --black: #191A1C;
+    --blue-grey: #8FBAD9;
+    --malin: #920038;
+    --plombir: #C7AB91;
+    --light-grey: #FAFAFA;
+    --light-cream: #F6F3F1;
+    --light-blue: #EDF3F7;
+    --grey-cream: #E7E7E7;
+    --black-warm: #898988;
+    --white: #FFFFFF;
+    --rose: #C42A64;
+    --green: #56C295;
+    --generic-grey: #CCCCCC;
+    --transparent: transparent;
+}
 /* Components */

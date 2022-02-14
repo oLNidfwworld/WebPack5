@@ -1,0 +1,102 @@
+header.header.w-full
+  .header-wrapper.flex.justify-between.bg-black
+    .hidden(class="md:flex md:w-1/3 lg:w-full whitespace-no-wrap")
+      .selector-wrapper
+        .text-white.mr-1
+          |Цветовая тема:
+        select(name="theme").theme-selector.max-w-none
+          option(value="classic")
+            |Классическая
+    .flex.w-full.items-center(class="xs:justify-between md:justify-end")
+      .selector-wrapper
+        .text-white.mr-1
+          |флаг
+        select(name="language").theme-selector
+          option(value="Rus")
+            |Рус
+      .selector-wrapper.hidden(class="sm:flex xs:ml-3 md:ml-5")
+        .text-white.mr-1.whitespace-no-wrap
+          |Регион доставки:
+        select(name="region").theme-selector
+          option(value="Russia")
+            |Россия
+      .grid.grid-cols-5.gap-2(class="xs:ml-3 md:ml-5")
+        a.socials-ico
+          img(width="18" src="./assets/img/instagram.svg")
+        a.socials-ico
+          img(width="18" src="./assets/img/facebook.svg")
+        a.socials-ico
+          img(width="18" src="./assets/img/youtube.svg")
+        a.socials-ico
+          img(width="18" src="./assets/img/vk.svg")
+        a.socials-ico
+          img(width="18" src="./assets/img/odnoklassniki.svg")
+  .header-main.header-wrapper
+    .header-sections
+      .logo
+        a(href="/").flex.relative
+          img(src="./assets/img/logo.png")
+          p.logo-title(class="md:text-xs")
+            |Официальный интернет-магазин
+      nav.hidden(class="hl:block xxxl:w-full mx-6 lg:mx-10 xxl:mx-14")
+        ul.top-menu
+          li.mx-2.text-malin
+            a(href="")
+              |Акции!
+          li.mx-2
+            a(href="")
+              |Каталог
+          li.mx-2
+            a(href="")
+              |Новинки
+          li.mx-2
+            a(href="")
+              |Примерочная
+          li.mx-2
+            a(href="")
+              |Доставка
+          li.mx-2.top-menu__more
+            a(href="javascript:void")
+              |...
+              ul.top-menu__more-menu
+                li.m-2
+                  |Контакты
+                li.m-2
+                  |Магазины
+          li.mx-2
+            a(href="")
+              |Контакты
+          li.mx-2
+            a(href="")
+              |Магазины
+      .box.flex.w-full
+        .search-section.flex.w-full.justify-end(class="sm:justify-between")
+          .hidden.w-full.justify-end(class="1xl:flex")
+            form.search-form.search
+              .search-wrapper
+                input(type="text" placeholder="Поиск товаров")
+                span.search-btn
+          .tpl_hamburger(id="sandwichmenu" class="hl:hidden")
+            <svg viewBox="0 0 800 600">
+              <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top"></path>
+              <path d="M300,320 L540,320" class="middle"></path>
+              <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+            </svg>
+          .js_menu.w-full
+            |menu there
+          .hidden(class="sm:flex 1xl:hidden")
+            button.search-btn
+
+          .login.hidden(class="sm:flex")
+            a(href="/").flex.items-center
+              img(src="./assets/img/user.svg")
+              span.font-medium.ml-1
+                |Войти
+            a(href="/").flex.items-center.ml-4
+              img(src="./assets/img/favorite.svg")
+              span.ml-1
+                |12
+            a(href="/").flex.items-center.ml-4
+              img(src="./assets/img/basket.svg")
+              span.ml-1
+                |18

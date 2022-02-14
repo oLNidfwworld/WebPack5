@@ -1,0 +1,14 @@
+.footer {
+    @apply bg-black text-light-grey;
+    padding-top:56px;
+    padding-bottom:28px;
+    &__left {
+      @apply flex w-full mr-5 flex-col;
+      max-width:440px;
+    }
+  }
+  @media screen and (max-width:970px){
+    .footer__left {
+      max-width: none;
+    }
+  }

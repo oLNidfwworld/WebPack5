@@ -1,3 +1,7 @@
+/* Tailwind import */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Core variables */
 @import 'base/vars';
@@ -17,14 +21,13 @@
 /* Vendor */
 
 /* Components */
-
-/* Tailwind import */
-@import "~tailwindcss/base.css";
-@import "~tailwindcss/components.css";
-@import "~tailwindcss/utilities.css";
-
 /* Browser specific styles */
 @import 'dirty/hacks';
 
-/* Demo Page styles */
+
+/* Page layout */
+@import 'blocks/header';
+@import 'blocks/footer';
+
+/* Pages styles */
 @import 'demo';

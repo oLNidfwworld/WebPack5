@@ -13,7 +13,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const environment = require('./configuration/environment');
 
-const PAGES_DIR = `${path.resolve(environment.paths.source)}/pages/`;
+const PAGES_DIR = `${path.resolve(environment.paths.source)}/pug/pages/`;
 const PAGES = fs
 	.readdirSync(PAGES_DIR)
 	.filter((fileName) => fileName.endsWith('.pug'));

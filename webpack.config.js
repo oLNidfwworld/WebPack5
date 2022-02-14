@@ -4,6 +4,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
@@ -12,14 +13,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const environment = require('./configuration/environment');
 
-const templateFiles = fs.readdirSync(environment.paths.source+'/pages')
-  .filter((file) => path.extname(file).toLowerCase() === '.html');
+const PAGES_DIR = `${path.resolve(environment.paths.source)}/pages/`;
+const PAGES = fs
+	.readdirSync(PAGES_DIR)
+	.filter((fileName) => fileName.endsWith('.pug'));
 
-const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin({
+const htmlPluginEntries = PAGES.map((page) => new HTMLWebpackPlugin({
   inject: true,
   hash: false,
-  filename: template,
-  template: path.resolve(environment.paths.source+'/pages', template),
+  template: `${PAGES_DIR}/${page}`,
+	filename: `./${page.replace(/\.pug/, '.html')}`,
   favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
 }));
 
@@ -33,6 +36,17 @@ module.exports = {
   },
   module: {
     rules: [
+      { 
+        test: /\.pug$/,
+        use: [ { loader: "@webdiscus/pug-loader",
+          options: { 
+            pretty: true, 
+          }, 
+        }, 
+        ], 
+      },
+
+
       {
         test: /\.((c|sa|sc)ss)$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
@@ -69,6 +83,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+			PAGES: JSON.stringify(PAGES),
+		}),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),

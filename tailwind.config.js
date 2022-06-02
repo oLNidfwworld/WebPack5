@@ -27,7 +27,6 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '46px',
       screens: {
         sm: "100%",
         md: "100%",
@@ -39,31 +38,26 @@ module.exports = {
       'xs': '320px',
       'sm': '480px',
       'md': '720px',
-      'hl': '970px',
+      //'hl': '970px',
       'lg': '1024px',
-      '1xl': '1200px',
+      //'1xl': '1200px',
       'xl': '1280px',
-      'xxl': '1400px',
-      'xxxl': '1600px',
+      //'xxl': '1400px',
+      //'xxxl': '1600px',
     },
     spacing: {
       ...spacingTheme,
     },
     colors: {
-    'black':'var(--black)',
-    'blue-grey':'var(--blue-grey)',
-    'malin':'var(--malin)',
-    'plombir':'var(--plombir)',
-    'light-grey':'var(--light-grey)',
-    'light-cream':'var(--light-cream)',
-    'light-blue':'var(--light-blue)',
-    'grey-cream':'var(--grey-cream)',
-    'black-warm':'var(--black-warm)',
-    'white':'var(--white)',
-    'rose':'var(--rose)',
-    'green':'var(--green)',
-    'generic-grey':'var(--generic-grey)',
-    'transparent':'var(--transparent)',
+      'black':'var(--black)',
+      'dblue':'var(--dark-blue)',
+      'magenta':'var(--magenta)',
+      'white':'var(--white)',
+      'grey':'var(--grey)',
+      'bej':'var(--bej)',
+      'blue':'var(--blue)',
+      'transparent':'var(--transparent)',
+      'fucsia':'var(--fucsia)'
     },
     borderColor: {
       ...colorTheme,
@@ -72,16 +66,13 @@ module.exports = {
       ...colorTheme,
     },
     fontSize: {
-      xs: '10px',
-      sm: '14px',
-      base: '16px',
-      lg: '18px',
-      '2lg': '20px',
-      '3lg': '24px',
-      '4lg': '30px',
-      'xl': '36px',
-      '2xl': '40px',
-      '3xl': '48px',
+      '60px':'60px',
+      '90px':'90px',
+      '32px':'32px',
+      '56px':'56px',
+      '24px':'24px',
+      '40px':'40px',
+      '12px':'12px'
     },
     lineHeight: {
       ...defaultTheme.lineHeight,
@@ -94,15 +85,12 @@ module.exports = {
       addComponents({
         '.container': {
           maxWidth: '100%',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          paddingLeft: '14px',
-          paddingRight: '14px',
           '@screen xs': {
             maxWidth: '100%',
+            padding:'20px 20px 0 20px'
           },
           '@screen sm': {
-            maxWidth: '444px',
+            maxWidth: '476px',
           },
           '@screen md': {
             maxWidth: '720px',
@@ -115,12 +103,12 @@ module.exports = {
             paddingLeft: '18px',
             paddingRight: '18px',
           },
-          '@screen xxl': {
-            maxWidth: '1401px',
-          },
-          '@screen xxxl': {
-            maxWidth: '1601px',
-          },
+          //'@screen xxl': {
+          //  maxWidth: '1401px',
+          //},
+          //'@screen xxxl': {
+          //  maxWidth: '1601px',
+          //},
         }
       })
     })

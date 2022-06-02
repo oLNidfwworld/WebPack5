@@ -1,18 +1,13 @@
 const colorTheme = {
-    'black':'var(--black)',
-    'blue-grey':'var(--blue-grey)',
-    'malin':'var(--malin)',
-    'plombir':'var(--plombir)',
-    'light-grey':'var(--light-grey)',
-    'light-cream':'var(--light-cream)',
-    'light-blue':'var(--light-blue)',
-    'grey-cream':'var(--grey-cream)',
-    'black-warm':'var(--black-warm)',
-    'white':'var(--white)',
-    'rose':'var(--rose)',
-    'green':'var(--green)',
-    'generic-grey':'var(--generic-grey)',
+  'black':'var(--black)',
+    'dblue':'var(--dark-blue)',
+    'magenta':'var(--magenta)',
+    'white':'var(--white',
+    'grey':'var(--grey)',
+    'bej':'var(--bej)',
+    'blue':'var(--blue)',
     'transparent':'var(--transparent)',
+    'fucsia':'var(--fucsia)'
   }
   
   const spacingTheme = Array(31).fill(null)

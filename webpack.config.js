@@ -97,7 +97,7 @@ module.exports = {
         plugins: [
           ['gifsicle', { interlaced: true }],
           ['jpegtran', { progressive: true }],
-          ['optipng', { optimizationLevel: 5 }],
+          ['optipng', { optimizationLevel: 1 }],//5 --> 1
           [
             'svgo',
             {
@@ -119,8 +119,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(environment.paths.source, 'images', 'content'),
-          to: path.resolve(environment.paths.output, 'images', 'content'),
+          from: path.resolve(environment.paths.source, 'assets', 'img'),//путь к имжышкам
+          to: path.resolve(environment.paths.output, 'assets', 'img'),
           toType: 'dir',
           globOptions: {
             ignore: ['*.DS_Store', 'Thumbs.db'],

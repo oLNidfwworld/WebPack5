@@ -1,149 +1,37 @@
-.theme-selector {
-    @apply text-blue-grey bg-transparent pr-3;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    background: url('../assets/img/select-arrow.svg') no-repeat right !important;
-    max-width:80px;
-  }
-  .header-wrapper {
-    @apply px-9 text-sm;
-    height: 40px;
-    @media screen and (min-width:480px) {
-      @media screen and (max-width:720px) {
-        @apply px-8;
-      }
+header{
+    background-color: var(--transparent);
+    position: absolute;
+    top:25px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+    left: 2%;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width:95%;
+    
+}
+
+.fix{
+    width: 13;
+    height: 15;
+}
+
+.info-block{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    align-items: center;
+}
+
+
+@media(min-width:1280px) {
+    header{
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr !important;
     }
-    @media screen and (min-width:720px) {
-      @media screen and (max-width:1400px) {
-      @apply px-9;
-      }
+}
+@media(min-width:1024px) {
+    header{
+        grid-template-columns: 1fr 5fr 1fr;
     }
-    @media screen and (min-width:1600px) {
-      @apply px-11;
-    }
-  }
-  .selector-wrapper {
-    @apply flex items-center;
-  }
-  .socials-ico {
-    @apply w-full h-full cursor-pointer;
-    max-width: 18px;
-    max-height: 18px;
-  }
-  .header-main {
-    @apply items-center flex;
-    height: 98px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-  }
-  .logo {
-    @apply w-full;
-    max-width: 244px;
-    min-width:175px;
-  }
-  .search {
-    @apply w-full;
-    max-width: 280px
-  }
-  .search-btn {
-    background: url('../assets/img/lupa.svg') no-repeat center center;
-    width:18px;
-    height:18px;
-    right: 0px;
-  }
-  .search-wrapper {
-    @apply relative items-center flex mb-2 justify-between;
-  
-  }
-  .header-sections {
-    @apply flex items-center w-full;
-  }
-  .search-form {
-    @apply border-black-warm;
-    border-bottom-width: 1px;
-  }
-  .login {
-    @apply flex w-full justify-end ml-6;
-    max-width:180px;
-    min-width: 180px;
-  }
-  .search-section {
-    @apply flex w-full items-center;
-  }
-  .header-theme {
-    @apply bg-black;
-  }
-  .top-menu {
-    @apply flex uppercase text-sm;
-    &__more {
-      @apply hidden;
-    }
-    &__more:hover &__more-menu {
-      @apply block absolute bg-white;
-      border: 1px solid var(--generic-grey);
-      z-index: 100;
-    }
-    &__more-menu {
-      @apply hidden w-full;
-      max-width: 124px;
-    }
-  }
-  
-  
-  @media screen and (max-width: 1400px) {
-    .top-menu li:nth-child(n+7) {
-      @apply hidden;
-    }
-    .top-menu__more {
-      @apply flex;
-    }
-  }
-  
-  #sandwichmenu {
-    text-align: center;
-  }
-  .tpl_hamburger svg {height: 40px;width: 60px;}
-  .tpl_hamburger svg {cursor: pointer;  height: 50px;  transform: translate3d(0px, 0px, 0px);  width: 50px;}
-  svg:not(:root) {overflow: hidden;}
-  .tpl_hamburger path.top, .tpl_hamburger path.bottom {
-      stroke-dasharray: 240px, 950px;
-  }
-  .tpl_hamburger path {
-      fill: none; stroke: #000; stroke-dashoffset: 0; stroke-linecap: round; stroke-width: 40px;
-      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
-  }
-  .tpl_hamburger path.middle {stroke-dasharray: 240px, 240px;}
-  .tpl_hamburger path {
-      fill: none; stroke: #000; stroke-dashoffset: 0; stroke-linecap: round; stroke-width: 40px;
-      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
-  }
-  
-  .tpl_hamburger.active path.top, .tpl_hamburger.active path.bottom {
-      stroke-dashoffset: -650px;
-  }
-  .tpl_hamburger path.top, .tpl_hamburger path.bottom {
-      stroke-dasharray: 240px, 950px;
-  }
-  .tpl_hamburger.active path.middle {
-      stroke-dasharray: 1px, 220px;
-      stroke-dashoffset: -115px;
-  }
-  
-  .js_menu {display: none;}
-  .js_menu.active {
-    @apply block absolute bg-white;
-    margin-top:98px;
-    left:0px;
-    z-index:100;
-  }
-  .logo-title {
-    @apply absolute text-black-warm;
-    right:0px;
-    bottom:0px;
-    font-size:9px;
-  }
-  .wrapper-content {
-    min-height: 100vh;
-    padding-bottom: 100px;
-  }
-  
+}

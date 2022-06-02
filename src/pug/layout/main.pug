@@ -9,12 +9,13 @@ html(lang='en')
     meta(name="description", content=description)
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no")
     block head
 
   body(class="debug-screens")
     .wrapper
-      .wrapper-page    
+      .wrapper-page
+        include ../includes/ddmenu
         include ../includes/header
         .wrapper-content
           block content

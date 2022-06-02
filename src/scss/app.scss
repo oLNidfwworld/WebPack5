@@ -28,6 +28,277 @@
 /* Page layout */
 @import 'blocks/header';
 @import 'blocks/footer';
+@import 'blocks/ddmenu.scss';
 
 /* Pages styles */
 @import 'demo';
+
+*{
+    
+    font-family: 'DINP-R';
+}
+
+
+@media(min-width:1280px){
+    .bord{
+        border-right-width: thin;border-color: var(--fucsia);
+    }
+}
+
+
+
+.container{
+    padding-top: 50px;
+    margin: auto;
+}
+.bold{
+    font-weight: bolder;
+}
+.gradient{
+    background: linear-gradient(90deg, var(--dark-blue) 0%, var(--magenta) 30%);
+    -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.swiper{
+    width: 100%;
+    height: 500px;
+    background-color: --transparent
+    
+}
+
+.swiper-slide{
+    border-radius: 0 0 100px 100px;
+}
+
+li {
+    @apply leading-7;
+    list-style-type: none; /* Убираем маркеры у списка */
+    white-space:prewrap;
+    margin-left: 20px;
+   }
+li:before {
+    @apply text-magenta;
+    content: "♦"; /* Добавляем в качестве маркера символ */
+}
+
+.bg1{
+    background-image: url(../assets/img/bg1.png);background-position: center;
+    background-size:cover;
+}
+.bg2{
+    background-image: url(../assets/img/bg2.webp);;
+    background-position: center;
+    background-size:cover;
+}
+.bg3{
+    background-image: url(../assets/img/bg3.jpg);;
+    background-position: center;
+    background-size:cover;
+}
+#parallax .blocks{
+    @apply grid gap-6 grid-cols-2;
+    
+}
+.items{
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    background-size:cover;
+    background-position:center;
+}
+#parallax2 .items img{
+    background-color: white;
+}
+#parallax .items{
+    @apply w-full;
+    background-size:cover;
+    background-position:center;
+    
+    
+    padding: 40px 30px;
+}
+
+@media(min-width:720px){
+    #parallax .items{
+        height: 300px;
+    }
+}
+.button{
+    border-radius: 90px;
+    padding: 10px 15px;
+    width: fit-content;
+    text-align: center;
+    white-space:nowrap;
+    cursor: pointer;
+}
+.el{
+    @apply flex gap-3 bg-transparent hover:bg-magenta p-3 cursor-pointer rounded-[60px] duration-500;
+}
+.el:hover svg path{
+    fill: var(--white);
+}
+.parallax{
+    background: url(../assets/img/paral.png);
+    background-repeat: repeat;
+    background-position: left ;
+}
+#parallax2 .blocks .items img{
+    width: 100%;
+}
+
+.m-bot{
+    margin-bottom: -200px;
+}
+.p-top{
+    padding-top: 200px;
+}
+#parallax2 .blocks{
+    @apply grid grid-cols-4 gap-6;
+    margin: 30px 0;
+}
+#parallax2 .items{
+    @apply grid grid-rows-2;
+}
+
+.minib{
+    @apply bg-dblue rounded-[60px] flex duration-1000 ease-out cursor-pointer;
+    position: absolute;
+    top:-30px;
+    left: 20px;
+    overflow: hidden;
+    max-width: 50px;
+}
+
+.minib span{
+    @apply text-24px text-white;
+    padding-left: 5px;
+    display: none;
+}
+.minib:hover span{
+    display: block;
+    
+}
+.minib:hover{
+    max-width: 300px;
+}
+
+.pointer-events-all{
+    pointer-events: all !important;
+    filter:none !important;
+}
+.round60px{
+    @apply rounded-[60px];;
+}
+#parallax3{
+    height: 200px;
+    width: 100%;
+}
+a{
+    cursor: pointer;
+}
+.cont{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+}
+
+@media(min-width:1280px){
+    .cont{
+        margin: 0 100px;
+        align-items: flex-start;
+    }
+}
+
+.mapblock{
+    @apply drop-shadow-2xl;
+    padding: 0;
+    left:0;top:0;
+    width:100%;
+    height:auto;
+    padding:50px;
+    z-index:10;
+    background-color: var(--white);
+    border-radius:  60px 60px 0 0 ;
+}
+
+.boxmap{
+    @apply w-full rounded-[60px];
+    position: absolute;
+    height:700px;
+    filter: blur(2px);
+    pointer-events: none;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 0 0 60px 60px ;
+    transition: 0.5s;
+}
+#mapsection{
+    height: 1200px;
+}
+.max-height{
+    max-height: 1000px !important;
+    transition: 1s;
+}
+.grid.pb-5.grid-cols-1.gap-10.xl\:grid-cols-2 * {
+    text-align: center;
+    justify-content: center;
+}
+.flex{
+    display: flex !important;
+}
+
+.text-24px.text-dblue.bold.pb-5 {
+    text-align: center;
+}
+.flex.gap-2 {
+    justify-content: center;
+}
+
+@media (min-width:480px){
+    .text-24px.text-dblue.bold.pb-5 {
+        text-align: left;
+    }
+    .flex.gap-2 {
+        justify-content: left;
+    }
+    #mapsection{
+        height: 1100px;
+    }
+    .grid.pb-5.grid-cols-1.gap-10.xl\:grid-cols-2 * {
+        text-align: left;
+        justify-content:left;
+    }
+}
+
+@media (min-width:720px){
+    .swiper{
+        height: 800px;
+    }
+    #mapsection{
+        height: 700px;
+    }
+    
+    .mapblock{
+        @apply block absolute  rounded-[60px];
+        padding:25px;
+        display: block;
+        position: absolute;
+        width:500px;height:75%; left:8vh;top:7vh;z-index:10;
+        background-color: var(--white);
+        
+    }
+    .boxmap{
+        @apply w-full rounded-[60px];
+        
+    }
+}
+@media (max-width:320px) {
+    .d.m-bot{
+        margin-bottom: -100px;
+    }
+}

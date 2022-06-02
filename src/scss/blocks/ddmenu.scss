@@ -1,0 +1,36 @@
+.drop-down-menu{
+    position: absolute;
+    left:0; top:-1000px;
+    height: auto;
+    background-color: var(--dark-blue);
+    border-radius: 0 0 60px 60px;
+    z-index: 3;
+    width: 100%;
+    padding-bottom: 50px;
+    transition:  0.75s;
+}
+.on-place{
+    top:0px !important;
+}
+.closebtn{
+    position: absolute;
+    right:10%;
+    top:20px;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+@media(min-width:480px){
+    .row{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+@media(min-width:1280px) {
+    .x{
+        min-width: 600px;
+    }
+    
+}

@@ -7,3 +7,36 @@ block variables
 
 
 block content
+  .bg-bej(style="height:125px;    border-radius: 0 0 60px 60px ;")
+  section#request
+    .container 
+      .text-12px.text-grey.whitespace-nowrap.pb-5.bold Главная  / 
+        span.gradient  Заявка на аренду
+      .gradient.bold.mb-10(class="text-40px text-center md:text-60px md:text-left") Заявка на аренду
+    
+      .bg-bej.text-center.round60px.justify-center.my-5(class="p-3 xl:p-0")
+        form
+          .text-black.text-32px.p-5.bold Данные компании
+          input(type="text" placeholder="Название компании" class="xl:w-3/4")
+          input(type="text" placeholder="Название магазина/торговой секции" class="xl:w-3/4")
+          input(type="text" placeholder="Контактное лицо, должность" class="xl:w-3/4")
+          input(type="text" placeholder="Телефон" class="xl:w-3/4")
+          input(type="text" placeholder="E-mail" class="xl:w-3/4")
+          .text-black.text-32px.p-5.bold Торговая деятельность
+          input(type="text" placeholder="Профиль торговой деятельности (торговля,услуги)" class="xl:w-3/4")
+          input(type="text" placeholder="Желаемый размер арендуемой площади (Площадь от-до м2, Этаж " class="xl:w-3/4")
+          input(type="text" placeholder="Товарный ассортимен" class="xl:w-3/4")
+          input(type="text" placeholder="Основные торговые марки" class="xl:w-3/4")
+          input(type="text" placeholder="Количество магазинов, города и ТЦ присутствия торговой секции" class="xl:w-3/4")
+          input(type="text" placeholder="Минимальная/максимальная стоимость единицы товара; средний чек" class="xl:w-3/4")
+          input(type="text" placeholder="Планируемая дата начала торговой деятельности" class="xl:w-3/4")
+          .text-black.p-5.bold Просьба вместе с данной заявкой предоставить дизайн-проект/фотографии/макеты Вашей торговой секции.
+          label.relative.rounded-3xl.border-dashed.border-2.flex.justify-center(for="myfile" class="xl:w-3/4").p-24.overflow-hidden.mx-auto
+            .flex.flex-col.items-center 
+              img(width="62" height="62" src="../assets/img/imgsrc.svg")
+              |Загрузите макет вашей торговой секции ( не более 25 мб)
+              #skolko
+            input(type="file" name="myfile[]" multiple id="myfile" )
+          textarea(class="xl:w-3/4" placeholder="Написать сообщение").rounded-3xl.m-5.p-5
+          br
+          button.button.bg-magenta.text-white.text-24px Отправить

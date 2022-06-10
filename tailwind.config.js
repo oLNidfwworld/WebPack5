@@ -72,7 +72,9 @@ module.exports = {
       '56px':'56px',
       '24px':'24px',
       '40px':'40px',
-      '12px':'12px'
+      '12px':'12px',
+      '18px':'18px',
+      '28px':'28px'
     },
     lineHeight: {
       ...defaultTheme.lineHeight,

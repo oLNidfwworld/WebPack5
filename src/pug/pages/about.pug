@@ -7,3 +7,74 @@ block variables
 
 
 block content
+  .bg-bej(style="height:125px;    border-radius: 0 0 60px 60px ;")
+  .swiper
+    .swiper-wrapper
+      .swiper-slide.bgbaba
+        .w-full.h-full.relative.flex
+          .cont.bold
+            .gradient(class="sm:text-28px md:text-40px ")
+              |Торгово-развлекательный центр  
+              br
+              |окружного значения «БРАВО»
+            br
+            br
+            .text-dblue(class="sm:text-24px")
+              ul
+                li  Уникальный дизайн
+                li  Фирменный стиль
+                li  Неповторимый облик
+                li  Атмосфера праздника
+          img(src="../assets/img/ladno.png" style="right: -236px;" class="hidden lg:block").absolute
+  .swiper-products.relative(style="max-height:1000px;" class="")
+      .swiper-wrapper 
+        .swiper-slide
+          .container
+            .flex(class="text-center md:text-left")
+              div 
+                .text-40px.gradient.bold За продуктами в «БРАВО»
+                br
+                .text-24px.text-grey Наши магазины представляют широчайший выбор качественных продовольственных и непродовольственных товаров. Для Вас работает гипермаркет «Лента», который представляет широчайший выбор качественных продовольственных и непродовольственных товаров.
+                .flex.gap-3.kartinochki
+                  img(src="../assets/img/myaso.png").w-full.h-full.m-auto
+                  img(src="../assets/img/lentochka.png").w-full.h-full.m-auto
+                  img(src="../assets/img/portovayashl.png").w-full.h-full.m-auto
+              
+              img(class="hidden xl:block" src="../assets/img/korzina.png")
+        
+      .swiper-button-prev
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle r="19.5" transform="matrix(-1 0 0 1 19.5 19.5)" fill="#37218E"/>
+        <path d="M12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L18.6569 11.9289C19.0474 11.5384 19.6805 11.5384 20.0711 11.9289C20.4616 12.3195 20.4616 12.9526 20.0711 13.3431L14.4142 19L20.0711 24.6569C20.4616 25.0474 20.4616 25.6805 20.0711 26.0711C19.6805 26.4616 19.0474 26.4616 18.6569 26.0711L12.2929 19.7071ZM28 20L13 20L13 18L28 18L28 20Z" fill="white"/>
+        </svg>
+
+
+      .swiper-button-next
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="19.5" cy="19.5" r="19.5" fill="#37218E"/>
+        <path d="M26.7071 19.7071C27.0976 19.3166 27.0976 18.6834 26.7071 18.2929L20.3431 11.9289C19.9526 11.5384 19.3195 11.5384 18.9289 11.9289C18.5384 12.3195 18.5384 12.9526 18.9289 13.3431L24.5858 19L18.9289 24.6569C18.5384 25.0474 18.5384 25.6805 18.9289 26.0711C19.3195 26.4616 19.9526 26.4616 20.3431 26.0711L26.7071 19.7071ZM11 20L26 20L26 18L11 18L11 20Z" fill="white"/>
+        </svg>
+  section.parallax.bg-dblue.round60px#parallax4.my-30
+    .container
+      .flex.gap-10(class="flex-col-reverse xl:flex-row")
+        img(src="../assets/img/telka.png")
+        .text-white.my-auto
+          .text-32px.bold(class='text-center md:text-left') ТРЦ «Браво!» в Братеево — только удачные покупки и только лучший отдых  для всей семьи!
+          br
+          |Торгово-развлекательный центр окружного значения «БРАВО» является единственным комплексом в округе (ЮАО), в котором сочетаются современные архитектурные решения, профессиональная концепция, пул арендаторов федерального значения и единственная в округе повседневная досуговая рекреационная зона.
+          br
+          br
+          |Уникальный дизайн, специально разработанныи британскои студией для проекта, с легко запоминающимся и безошибочно узнаваемым названием, фирменным стилем, придает фасадам и интерьерам здания неповторимый облик, сочетающий современные высокие технологии, функциональность и атмосферу праздника.
+
+  .container 
+    .gallery#gallery
+      a(data-fancybox="g" data-src="../assets/img/1.png" )
+        img(src="../assets/img/1.png")
+      a(data-fancybox="g" data-src="../assets/img/2.png")
+        img(src="../assets/img/2.png")
+      a(data-fancybox="g" data-src="../assets/img/3.png")
+        img(src="../assets/img/3.png")
+
+    .button.bg-magenta.text-white.m-auto.text-24px.mb-5#more Показать еще
+  
+  

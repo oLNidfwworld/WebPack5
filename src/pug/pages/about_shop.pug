@@ -1,0 +1,167 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Какой-то магаз';
+  - var description = 'Главная страница';
+  - var pageClass = 'index-page';
+
+block content
+    
+    .bg-bej(style="height:125px;    border-radius: 0 0 60px 60px ;")
+    section.bg-white.parallax#parallax5.relative.overflow-hidden(class="flex flex-col md:block")
+        .container
+            div(class="w-full md:w-1/2 xl:w-1/3 pb-10")
+                .text-12px.text-grey.whitespace-nowrap.mb-5.bold Главная  / Магазины /
+                    span.gradient Какой-то магаз
+                img(src="/assets/img/Caramel.png" class="justify-center md:justify-left").m-auto.my-15
+                .gradient.bold.mb-10.my-5(class="text-40px text-center md:text-60px md:text-left") Карамелли
+                .text-black.bold(class="text-center md:text-left")  Магазин  детской одежды ∙ Детский магазин ∙ Детские товары оптом
+                .flex.justify-between.my-5
+                    .flex.gap-2.items-center
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_629_5770)">
+                        <path d="M10.1723 8.31032L8.08086 6.92123V4.09163C8.08086 3.80712 7.82117 3.57715 7.4999 3.57715C7.17863 3.57715 6.91895 3.80712 6.91895 4.09163V7.1785C6.91895 7.34055 7.00493 7.49336 7.15133 7.59009L9.4751 9.13352C9.57966 9.20297 9.70168 9.23642 9.82309 9.23642C10.0003 9.23642 10.1746 9.16592 10.2884 9.0301C10.4814 8.80319 10.4291 8.48062 10.1723 8.31032Z" fill="#D20373"/>
+                        <path d="M7.5 0.495605C3.36425 0.495605 0 3.47493 0 7.13748C0 10.8 3.36425 13.7794 7.5 13.7794C11.6358 13.7794 15 10.8 15 7.13748C15 3.47493 11.6358 0.495605 7.5 0.495605ZM7.5 12.7504C4.00562 12.7504 1.16188 10.2321 1.16188 7.13748C1.16188 4.04291 4.00562 1.52455 7.5 1.52455C10.995 1.52455 13.8381 4.04291 13.8381 7.13748C13.8381 10.2321 10.9944 12.7504 7.5 12.7504Z" fill="#D20373"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_629_5770">
+                        <rect width="15" height="13.2838" fill="white" transform="translate(0 0.495605)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        .bold 10:00 — 22:00
+                    .bold 2 этаж
+                .flex(class="flex-col sm:flex-row sm:gap-5").items-center
+                    .button.bg-dblue.text-18px.text-white.my-5(class="w-1/2 ")
+                            .flex.gap-2.justify-center
+                                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.947 5.81812C11.7404 2.64125 9.14762 0.152588 6.04415 0.152588C2.96658 0.152588 0.374008 2.63887 0.141548 5.81707C0.0489697 7.20617 0.487523 8.64277 1.38143 9.86847L5.52083 15.4022C5.64415 15.5671 5.83806 15.6643 6.04415 15.6643C6.25025 15.6643 6.44392 15.5672 6.56747 15.4022L10.7063 9.86933C11.6023 8.6748 12.0429 7.23558 11.947 5.81812ZM9.66004 9.08546L6.04415 13.9194L2.43283 9.09179C1.72412 8.11992 1.37334 6.98765 1.44545 5.90812C1.60537 3.72141 3.36943 1.45954 6.04415 1.45954C8.74153 1.45954 10.5006 3.71856 10.6426 5.90465C10.7176 7.01117 10.3688 8.14081 9.66004 9.08546Z" fill="white"/>
+                                <path d="M6.00035 3.20239C4.66679 3.20239 3.58203 4.28716 3.58203 5.62071C3.58203 6.95426 4.66679 8.03902 6.00035 8.03902C7.33366 8.03902 8.41866 6.95426 8.41866 5.62071C8.41862 4.28712 7.3339 3.20239 6.00035 3.20239ZM6.00035 6.7318C5.38773 6.7318 4.88926 6.23332 4.88926 5.62071C4.88926 4.99762 5.37726 4.50962 6.00035 4.50962C6.62343 4.50962 7.11144 4.99762 7.11144 5.62071C7.11144 6.23332 6.61296 6.7318 6.00035 6.7318Z" fill="white"/>
+                                </svg>
+                                |На карте
+                    .button.bg-magenta.text-18px.text-white.my-5(class="w-1/2 ")
+                            .flex.gap-2.justify-center
+                                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.947 5.81812C11.7404 2.64125 9.14762 0.152588 6.04415 0.152588C2.96658 0.152588 0.374008 2.63887 0.141548 5.81707C0.0489697 7.20617 0.487523 8.64277 1.38143 9.86847L5.52083 15.4022C5.64415 15.5671 5.83806 15.6643 6.04415 15.6643C6.25025 15.6643 6.44392 15.5672 6.56747 15.4022L10.7063 9.86933C11.6023 8.6748 12.0429 7.23558 11.947 5.81812ZM9.66004 9.08546L6.04415 13.9194L2.43283 9.09179C1.72412 8.11992 1.37334 6.98765 1.44545 5.90812C1.60537 3.72141 3.36943 1.45954 6.04415 1.45954C8.74153 1.45954 10.5006 3.71856 10.6426 5.90465C10.7176 7.01117 10.3688 8.14081 9.66004 9.08546Z" fill="white"/>
+                                    <path d="M6.00035 3.20239C4.66679 3.20239 3.58203 4.28716 3.58203 5.62071C3.58203 6.95426 4.66679 8.03902 6.00035 8.03902C7.33366 8.03902 8.41866 6.95426 8.41866 5.62071C8.41862 4.28712 7.3339 3.20239 6.00035 3.20239ZM6.00035 6.7318C5.38773 6.7318 4.88926 6.23332 4.88926 5.62071C4.88926 4.99762 5.37726 4.50962 6.00035 4.50962C6.62343 4.50962 7.11144 4.99762 7.11144 5.62071C7.11144 6.23332 6.61296 6.7318 6.00035 6.7318Z" fill="white"/>
+                                    </svg>
+                                    |Сайт магазина    
+                .flex.gap-3
+                    img(src="/assets/img/vk.png" )
+                    img(src="/assets/img/inst.png" )
+                    img(src="/assets/img/twit.png" )
+                    img(src="/assets/img/f.png" )
+                    img(src="/assets/img/ok.png" )
+        img.floating-img(src="/assets/img/pikcha.png" )
+    .bg-transparent
+        section.bg-bej.parallax#parallax6.pt-10(class="md:top-round")
+            .container
+                div(class="text-center md:text-left ")
+                    .text-32px.text-black.bold Знакомство с компанией Карамелли
+                    br
+                    .text-black Компания «Карамелли» занимается изготовлением детской одежды превосходного качества и реализует ее оптом и в розницу по доступным ценам. Мы приглашаем рядовых покупателей, а также владельцев салонов, магазинов и торговых павильонов к сотрудничеству на выгодных условиях. Наша фабрика имеет в распоряжении собственное швейное производство, которое оснащено самым современным оборудованием. Это позволяет нам создавать предметы гардероба идеального кроя.
+                    br
+                    br
+                    .text-black.bold Российская детская одежда оптом от производителя «Карамелли» обладает множеством достоинств:
+                    br
+                    .grid.gap-10.w-full(class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4")
+                        div 
+                            .text-20px.text-blue.bold Стильный дизайн
+                            .text-black В таких вещах ребенок будет чувствовать себя комфортно.
+                        div 
+                            .text-20px.text-blue.bold Опрятный вид
+                            .text-black Опрятный внешний вид привлекает внимание.
+                        div 
+                            .text-20px.text-blue.bold Натуральные ткани
+                            .text-black Пошив нашей одежды отвечает гигиеническим нормам.  
+                        div 
+                            .text-20px.text-blue.bold Обновление коллекций
+                            .text-black Пополнение ассортимента каждый день. 
+                    .gap-10.p-10.flex
+                            <svg class="hidden md:block" width="74" height="30" viewBox="0 0 74 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="74" width="2" height="74" transform="rotate(90 74 0)" fill="#FCDDEC"/>
+                            </svg>
+                            div
+                                .text-24px.text-dblue Доступная стоимость продукции. Мы устанавливаем 
+                                    br
+                                    |демократичные цены на детскую одежду оптом и в розницу.
+    .bg-bej
+        section.bg-dblue.parallax.pt-10.top-round#parallax7(style="margin-bottom:-50px;")
+            .container 
+                .text-60px.text-white Похожие магазины
+                .blocks(class="grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 ").m-0.mt-10.pb-20.m-bot
+                    .items
+                        img(src="/assets/img/funday.png")
+                        div(class="relative")
+                            a.minib(href="/about_shop.html")
+                                span Подробнее
+                                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.7071 19.7071C27.0976 19.3166 27.0976 18.6834 26.7071 18.2929L20.3431 11.9289C19.9526 11.5384 19.3195 11.5384 18.9289 11.9289C18.5384 12.3195 18.5384 12.9526 18.9289 13.3431L24.5858 19L18.9289 24.6569C18.5384 25.0474 18.5384 25.6805 18.9289 26.0711C19.3195 26.4616 19.9526 26.4616 20.3431 26.0711L26.7071 19.7071ZM11 20L26 20L26 18L11 18L11 20Z" fill="white"/>
+                                </svg>
+                            .p-5 
+                                .text-dblue.text-18px.bold FUNDAY
+                                .text-grey.text-16px Магазины яркой, доступной и практичной одежды для всей семьи!
+                                .flex.justify-between
+                                    .text-black 10:00 - 22:00
+                                    .text-black 2 этаж
+                    .items 
+                        img(src="/assets/img/dairos.png")
+                        div(class="relative")
+                            a.minib(href="/about_shop.html")
+                                span Подробнее
+                                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.7071 19.7071C27.0976 19.3166 27.0976 18.6834 26.7071 18.2929L20.3431 11.9289C19.9526 11.5384 19.3195 11.5384 18.9289 11.9289C18.5384 12.3195 18.5384 12.9526 18.9289 13.3431L24.5858 19L18.9289 24.6569C18.5384 25.0474 18.5384 25.6805 18.9289 26.0711C19.3195 26.4616 19.9526 26.4616 20.3431 26.0711L26.7071 19.7071ZM11 20L26 20L26 18L11 18L11 20Z" fill="white"/>
+                                </svg>
+                            .p-5 
+                                .text-dblue.text-18px.bold DAIROS
+                                .text-grey.text-16px Большое разнообразие джинсов и джинсовой одежды
+                                .flex.justify-between
+                                    .text-black 10:00 - 22:00
+                                    .text-black 2 этаж
+                    .items
+                        img(src="/assets/img/giana.png").bg-white
+                        div(class="relative")
+                            a.minib(href="/about_shop.html")
+                                span Подробнее
+                                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.7071 19.7071C27.0976 19.3166 27.0976 18.6834 26.7071 18.2929L20.3431 11.9289C19.9526 11.5384 19.3195 11.5384 18.9289 11.9289C18.5384 12.3195 18.5384 12.9526 18.9289 13.3431L24.5858 19L18.9289 24.6569C18.5384 25.0474 18.5384 25.6805 18.9289 26.0711C19.3195 26.4616 19.9526 26.4616 20.3431 26.0711L26.7071 19.7071ZM11 20L26 20L26 18L11 18L11 20Z" fill="white"/>
+                                </svg>
+                            .p-5 
+                                .text-dblue.text-18px.bold Gianni Conti
+                                .text-grey.text-16px Бренды итальянских и немецких аксессуаров — стиль на страже красоты!
+                                .flex.justify-between
+                                    .text-black 10:00 - 22:00
+                                    .text-black 2 этаж
+                    .items
+                        img(src="/assets/img/funday.png")
+                        div(class="relative")
+                            a.minib(href="/about_shop.html")
+                                span Подробнее
+                                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.7071 19.7071C27.0976 19.3166 27.0976 18.6834 26.7071 18.2929L20.3431 11.9289C19.9526 11.5384 19.3195 11.5384 18.9289 11.9289C18.5384 12.3195 18.5384 12.9526 18.9289 13.3431L24.5858 19L18.9289 24.6569C18.5384 25.0474 18.5384 25.6805 18.9289 26.0711C19.3195 26.4616 19.9526 26.4616 20.3431 26.0711L26.7071 19.7071ZM11 20L26 20L26 18L11 18L11 20Z" fill="white"/>
+                                </svg>
+                            .p-5 
+                                .text-dblue.text-18px.bold FUNDAY
+                                .text-grey.text-16px Магазины яркой, доступной и практичной одежды для всей семьи!
+                                .flex.justify-between
+                                    .text-black 10:00 - 22:00
+                                    .text-black 2 этаж
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

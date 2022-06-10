@@ -30,6 +30,7 @@
 @import 'blocks/footer';
 @import 'blocks/ddmenu.scss';
 
+@import "@fancyapps/ui/dist/fancybox.css";
 /* Pages styles */
 @import 'demo';
 
@@ -37,15 +38,41 @@
     
     font-family: 'DINP-R';
 }
+.floating-img{
+    @apply block static w-full h-full;
+    z-index: 1;
+}
 
-
-@media(min-width:1280px){
-    .bord{
-        border-right-width: thin;border-color: var(--fucsia);
+.top-round{
+    border-radius: 60px 60px 0 0 ;
+}
+@media (min-width:720px){
+    .floating-img{
+        @apply absolute w-5/12 top-0 right-0;
+        object-fit: cover;
+        border-radius: 0 60px 0 0;
     }
+    #parallax6{
+        border-radius: 60px 60px 0 0;
+    }
+}
+svg{
+    min-width: 20px;
+    max-width: 100px;
 }
 
 
+#request input[type="text"]{
+    @apply  my-4 p-5 round60px w-full h-auto;
+}
+
+
+#request input[type="file"]{
+    @apply absolute left-0 -top-10 w-full h-full ;
+}
+#request textarea{
+    @apply w-10/12;
+}
 
 .container{
     padding-top: 50px;
@@ -67,20 +94,61 @@ background-clip: text;
     background-color: --transparent
     
 }
-
-.swiper-slide{
-    border-radius: 0 0 100px 100px;
+.swiper-slide.bgbaba{
+    border-radius: 60px;
 }
 
+.gallery{
+    @apply mb-10;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    overflow: hidden;
+    
+}
+
+.swiper .swiper-slide{
+    border-radius: 0 0 60px 60px;
+}
+.swiper-products {
+    width: 100%;
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+   content: none !important;
+}
+.swiper-button-prev, .swiper-button-next{
+    width: auto !important;
+    height: auto !important;
+    position: absolute;
+    top:75% !important;
+    
+}
+@media(min-width:480px){
+    .swiper-button-prev, .swiper-button-next{
+        
+        top:50% !important;
+        
+    }
+}
 li {
-    @apply leading-7;
+    @apply leading-9;
     list-style-type: none; /* Убираем маркеры у списка */
     white-space:prewrap;
     margin-left: 20px;
+    padding-left:20px;
    }
 li:before {
     @apply text-magenta;
+    margin-right: 20px;
     content: "♦"; /* Добавляем в качестве маркера символ */
+}
+
+.bgbaba{
+    background-image: url(../assets/img/babanaphonke.png);background-position: center;
+    background-size:cover;
 }
 
 .bg1{
@@ -102,13 +170,16 @@ li:before {
     
 }
 .items{
+    overflow: hidden;
     background-color: rgb(226, 226, 226);
     border-radius: 10px;
     background-size:cover;
     background-position:center;
+
 }
-#parallax2 .items img{
+#parallax7 .items img, #parallax5 .items img,#parallax2 .items img, #parallax4 .items img{
     background-color: white;
+    
 }
 #parallax .items{
     @apply w-full;
@@ -119,22 +190,23 @@ li:before {
     padding: 40px 30px;
 }
 
-@media(min-width:720px){
-    #parallax .items{
-        height: 300px;
-    }
-}
+
 .button{
     border-radius: 90px;
-    padding: 10px 15px;
+    padding: 15px 20px;
     width: fit-content;
     text-align: center;
     white-space:nowrap;
     cursor: pointer;
+    transition: 1s;
+}
+.button:hover {
+    box-shadow: 2px 5px 7px var(--blue) ,-2px -5px  7px var(--magenta);
 }
 .el{
     @apply flex gap-3 bg-transparent hover:bg-magenta p-3 cursor-pointer rounded-[60px] duration-500;
 }
+
 .el:hover svg path{
     fill: var(--white);
 }
@@ -142,8 +214,10 @@ li:before {
     background: url(../assets/img/paral.png);
     background-repeat: repeat;
     background-position: left ;
+
+    
 }
-#parallax2 .blocks .items img{
+#parallax2 .blocks .items img,#parallax4 .blocks .items img{
     width: 100%;
 }
 
@@ -153,31 +227,41 @@ li:before {
 .p-top{
     padding-top: 200px;
 }
-#parallax2 .blocks{
+#parallax7 .blocks,#parallax5 .blocks,#parallax2 .blocks,#parallax4 .blocks{
     @apply grid grid-cols-4 gap-6;
     margin: 30px 0;
 }
-#parallax2 .items{
-    @apply grid grid-rows-2;
+#parallax7 .items, #parallax5 .items, #parallax2 .items{
+    //@apply grid grid-rows-2;
+    display: flex;
+    flex-direction: column;
 }
-
 .minib{
-    @apply bg-dblue rounded-[60px] flex duration-1000 ease-out cursor-pointer;
+    @apply bg-dblue rounded-[60px] flex  cursor-pointer;
     position: absolute;
     top:-30px;
     left: 20px;
     overflow: hidden;
     max-width: 50px;
+    padding: 5px;
+    transition: all 1.5s;
+}
+
+.minib svg{
+    min-width: 1px;
 }
 
 .minib span{
     @apply text-24px text-white;
-    padding-left: 5px;
-    display: none;
+    
+    transition: all 0.75s;
+    overflow: hidden;
+    width: 0;
+    overflow: hidden;
 }
 .minib:hover span{
-    display: block;
-    
+    width: 100%;
+    transition: all 1s;
 }
 .minib:hover{
     max-width: 300px;
@@ -207,12 +291,7 @@ a{
     height: 75%;
 }
 
-@media(min-width:1280px){
-    .cont{
-        margin: 0 100px;
-        align-items: flex-start;
-    }
-}
+
 
 .mapblock{
     @apply drop-shadow-2xl;
@@ -226,6 +305,7 @@ a{
     border-radius:  60px 60px 0 0 ;
 }
 
+
 .boxmap{
     @apply w-full rounded-[60px];
     position: absolute;
@@ -233,17 +313,14 @@ a{
     filter: blur(2px);
     pointer-events: none;
     overflow: hidden;
-    background-color: black;
+    background-color: var(--transparent);
     border-radius: 0 0 60px 60px ;
     transition: 0.5s;
 }
 #mapsection{
     height: 1200px;
 }
-.max-height{
-    max-height: 1000px !important;
-    transition: 1s;
-}
+
 .grid.pb-5.grid-cols-1.gap-10.xl\:grid-cols-2 * {
     text-align: center;
     justify-content: center;
@@ -258,8 +335,31 @@ a{
 .flex.gap-2 {
     justify-content: center;
 }
+.gono{
+    max-height: 200px;
+    transition: 1s;
+}
+.kartinochki{
+    max-width: 100px;
+}
 
-@media (min-width:480px){
+.max-height{
+    max-height: 1000px !important;
+    transition: 1s !important;
+}
+
+@media (max-width:320px) {
+    .d.m-bot{
+        margin-bottom: -100px;
+    }
+    
+}
+
+
+@media(min-width:480px){
+    .kartinochki{
+        max-width: 140px;
+    }
     .text-24px.text-dblue.bold.pb-5 {
         text-align: left;
     }
@@ -275,7 +375,17 @@ a{
     }
 }
 
-@media (min-width:720px){
+
+@media(min-width:720px){
+    .gono{
+        max-height: 100px;
+    }
+    #parallax .items{
+        height: 300px;
+    }
+    .kartinochki{
+        max-width:100%;
+    }
     .swiper{
         height: 800px;
     }
@@ -297,8 +407,13 @@ a{
         
     }
 }
-@media (max-width:320px) {
-    .d.m-bot{
-        margin-bottom: -100px;
+
+@media(min-width:1024px){
+    .bord{
+        border-right-width: thin;border-color: var(--fucsia);
+    }
+    .cont{
+        margin: 0 100px;
+        align-items: flex-start;
     }
 }

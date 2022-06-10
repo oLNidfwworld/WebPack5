@@ -62,7 +62,7 @@ svg{
 }
 
 
-#request input[type="text"]{
+#request input[type="text"],input[type="tel"],input[type="email"]{
     @apply  my-4 p-5 round60px w-full h-auto;
 }
 

@@ -1,0 +1,183 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Кондитерские изделия список';
+  - var description = '';
+  - var pageClass = ' ';
+
+block content
+    .container
+        .breadcrumbs
+            a(href='index.html').el Главная 
+            a(href='izdeliya.html').el Кондитерские изделия 
+            a(href='izdeliya.html').el.current Пирожные
+        .mobile-sections
+            .bg-gray.text-center.rubik.p-3(class='md:hidden') Показать разделы
+            .section-top.unreachable
+                a.el ВСЁ
+                a.el Выпечка
+                a.el Зефир и безе
+                a.el Кексы
+                a.el Коржики и сочники
+                a.el Печенье
+                a.el.current Пирожные    
+                a.el Пончики
+                a.el Рулеты
+                a.el Слойки
+                a.el Торты
+                a.el Торты-пирожные
+        h1.main-title Пирожные
+        
+        
+
+        .top-bar
+            .mobile-filter
+                .bg-gray.text-center.rubik.p-3(class='lg:hidden rounded-[10px]') Показать фильтр
+                .section-filter.unreachable
+                    |Фильтр
+                    .select-checkbox#id1
+                        .flex.justify-between 
+                          .placeholder Начинка
+                          .strelka
+                        .drop
+                            .item
+                                input#jam(type='checkbox')
+                                label(for='jam') Джем
+                            .item 
+                                input#krem(type='checkbox')
+                                label(for='krem') Крем
+                            .item 
+                                input#sgush(type='checkbox')
+                                label(for='sgush') Сгущенка
+                            .item 
+                                input#choco(type='checkbox')
+                                label(for='choco') Шоколад
+                            .item 
+                                input#stcheese(type='checkbox')
+                                label(for='stcheese') Сливочно-творожный сыр
+                
+                    .select-checkbox#id2
+                        .flex.justify-between 
+                          .placeholder Тара
+                          .strelka
+                        .drop
+                            .item
+                                input#tv(type='checkbox')
+                                label(for='tv') Лоток-телевизор
+
+                    .select-checkbox#id3
+                        .flex.justify-between 
+                          .placeholder Срок годности
+                          .strelka
+                        .drop
+                            .item
+                                input#thirtydays(type='checkbox')
+                                label(for='thirtydays') 30 дней
+                            .item
+                                input#sixtydays(type='checkbox')
+                                label(for='sixtydays') 60 дней
+            .display 
+                img(src='/assets/img/item-blocks-inactive.svg')
+                img(src='/assets/img/item-list-active.svg')
+                
+        
+        .catalog.list
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/1.png')
+                .description 
+                    .title Корзиночка малютка с клюквой
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el
+                .image-container
+                    img(src='/assets/img/keksi/2.png')
+                    .new 
+                        img(src='/assets/img/new.svg')
+                .description 
+                    .title Корзиночка малютка белая
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el
+                .image-container
+                    img(src='/assets/img/keksi/3.png')
+                .description 
+                    .title Корзиночка вишнёвая поэзия
+
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/4.png')
+                .description 
+                    .title Корзиночка мини
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/5.png')
+                .description 
+                    .title Корзиночка Маринка
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/6.png')
+                .description 
+                    .title Корзиночка Вишнёвая поэзия
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/7.png')
+                .description 
+                    .title Кольцо заварное
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/8.png')
+                    .new 
+                        img(src='/assets/img/new.svg')
+                .description 
+                    .title Корзиночка Маринка
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            .mini-pizza-adv
+                .mt-20.text-center.montserratFAT.font-black.text-white(class='text-30px md:text-40px lg:text-50px xl:text-60px') Пицца мини от ПрофКухни!
+                .w-fit.m-auto 
+                    button.button-gradient-pink.mt-10
+                        |Выбрать питсу
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/4.png')
+                .description 
+                    .title Корзиночка мини
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+            a(href='/izdeliya-inside-detail.html').el    
+                .image-container
+                    img(src='/assets/img/keksi/5.png')
+                .description 
+                    .title Корзиночка Маринка
+                    .chars 
+                        div Вес: 2,7 кг
+                        div Тара: лоток-телевизор
+        
+        .w-fit.m-auto 
+            button.button-gradient-violet.mt-10#download-price
+                |Скачать прайс
+
+
+
+
+

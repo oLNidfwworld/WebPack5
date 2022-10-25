@@ -1,0 +1,114 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Корзиночка Вишнёвая поэзия';
+  - var description = '';
+  - var pageClass = '';
+
+block content 
+    .container 
+        .breadcrumbs
+            a(href='index.html').el Главная 
+            a(href='izdeliya.html').el Кондитерские изделия
+            a(href='izdeliya-inside-block.html').el Пирожные
+            a(href='blog.html').el Корзиночка Вишнёвая поэзия
+        
+        .izdelie
+            .bg
+            .content
+                .flex.self-center(class='m-auto -mt-[100px] lg:m-auto ')
+                    .image-container 
+                        img(src='assets/img/Razdeli/1.png')
+                    .slides
+                
+                .flex.flex-col(class='gap-[15px]')
+                    .montserrat.font-extrabold.main-title(class='text-24px sm:text-40px lg:text-46px xl:text-60px lg:leading-[60px]') Корзиночка Вишнёвая поэзия 
+                    .rubik.text-violet(class='text-24px sm:text-36px lg:text-40px xl:text-50px') 1,0 кг
+                    .rubik
+                        span.font-bold(class="text-16px sm:text-18px lg:text-20px xl:text-24px") Тара: 
+                        span(class="text-16px sm:text-18px lg:text-20px xl:text-24px") лоток-телевизор
+                    .rubik(class="text-16px sm:text-18px lg:text-20px xl:text-24px")
+                        span.font-bold(class="text-16px sm:text-18px lg:text-20px xl:text-24px") Срок годности: 
+                        span(class="text-16px sm:text-18px lg:text-20px xl:text-24px") 30 суток
+                    .rubik(class="text-16px sm:text-18px lg:text-20px xl:text-24px")
+                        span.font-bold(class="text-16px sm:text-18px lg:text-20px xl:text-24px") Состав:  
+                        span(class="text-16px sm:text-18px lg:text-20px xl:text-24px") Мука пшеничная в/с, сахар-песок, маргарин для песочного теста, яйцо куриное, сода пищевая, сорбат калия, уксус столовый, паста для сбивания, сгущенка, ванилин, начинка джем вишневый с кусочками, вишня цукатная, краситель пищевой гелевый сиреневый.		
+                    div(class="m-auto lg:m-[0]")
+                        button.button-gradient-violet Запросить прайс	
+        
+        h2 Похожие товары
+        .similar-slider
+            .swiper#similar 
+                .swiper-wrapper 
+                    .swiper-slide
+                        .w-fit.m-auto
+                            a(href='/').el 
+                                .image-container
+                                    img(src='/assets/img/keksi/1.png')
+                                    .new 
+                                        img(src='/assets/img/new.svg')
+                                .description 
+                                    .title Корзиночка малютка с клюквой
+                                    .chars 
+                                        div Вес: 2,7 кг
+                                        div Тара: лоток-телевизор
+                    .swiper-slide
+                        .w-fit.m-auto
+                            a(href='/').el 
+                                .image-container
+                                    img(src='/assets/img/keksi/1.png')
+                                    .new 
+                                        img(src='/assets/img/new.svg')
+                                .description 
+                                    .title Корзиночка малютка с клюквой
+                                    .chars 
+                                        div Вес: 2,7 кг
+                                        div Тара: лоток-телевизор
+                    .swiper-slide
+                        .w-fit.m-auto
+                            a(href='/').el 
+                                .image-container
+                                    img(src='/assets/img/keksi/1.png')
+                                    .new 
+                                        img(src='/assets/img/new.svg')
+                                .description 
+                                    .title Корзиночка малютка с клюквой
+                                    .chars 
+                                        div Вес: 2,7 кг
+                                        div Тара: лоток-телевизор
+                    .swiper-slide
+                        .w-fit.m-auto
+                            a(href='/').el 
+                                .image-container
+                                    img(src='/assets/img/keksi/1.png')
+                                    .new 
+                                        img(src='/assets/img/new.svg')
+                                .description 
+                                    .title Корзиночка малютка с клюквой
+                                    .chars 
+                                        div Вес: 2,7 кг
+                                        div Тара: лоток-телевизор
+                    .swiper-slide
+                        .w-fit.m-auto
+                            a(href='/').el 
+                                .image-container
+                                    img(src='/assets/img/keksi/1.png')
+                                    .new 
+                                        img(src='/assets/img/new.svg')
+                                .description 
+                                    .title Корзиночка малютка с клюквой
+                                    .chars 
+                                        div Вес: 2,7 кг
+                                        div Тара: лоток-телевизор
+                    .swiper-slide
+                        .w-fit.m-auto
+                            a(href='/').el 
+                                .image-container
+                                    img(src='/assets/img/keksi/1.png')
+                                    .new 
+                                        img(src='/assets/img/new.svg')
+                                .description 
+                                    .title Корзиночка малютка с клюквой
+                                    .chars 
+                                        div Вес: 2,7 кг
+                                        div Тара: лоток-телевизор

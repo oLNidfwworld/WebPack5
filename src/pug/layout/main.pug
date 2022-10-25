@@ -13,30 +13,6 @@ html(lang='en')
     block head
 
   body(class="debug-screens")
-    if pageClass == 'index'
-        style(type='text/css').
-          header,footer{background:transparent !important;}
-          body {
-          background: linear-gradient(180deg, #FFA8BA 0%, #BFA8FF 16.09%, #DFA8DC 38.32%, #F2A8C9 45.8%, #FFA8BA 51.52%, #E1A8DA 58.26%, #BFA8FF 69.02%, #E1A8DA 75.26%, #FFA8BA 80.52%);  !important   }
-    else 
-        style(type='text/css').
-          .wrapper-content{
-            background:var(--white);
-            position:relative;
-          }
-          .wrapper-content:after{
-            content: '';
-            position: absolute;
-            background: url(assets/img/glz.png) no-repeat;
-            top: 100%;
-            width: 100%;
-            /* background-repeat: no-repeat; */
-            height: 316px;
-          }
-          footer{
-            padding-top:316px;
-          }
-    include ../includes/burger
     .wrapper
       .wrapper-page
         include ../includes/header

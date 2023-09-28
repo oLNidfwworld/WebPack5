@@ -1,10 +1,8 @@
 const colorTheme = {
   'pink':'var(--pink)',
-     'black':'var(--black)',
-      'white':'var(--white)',
-      'violet':'var(--violet)',
-      'gray':'var(--gray)',
-    'transparent':'var(--transparent)',
+     'blue':'var(--blue)',
+     'white':'var(--white)', 
+     'semi-cyan':'var(--semi-cyan)', 
   }
   
   const spacingTheme = Array(31).fill(null)

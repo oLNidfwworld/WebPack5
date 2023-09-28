@@ -1,11 +1,32 @@
-extends ../layout/main
-
-block variables
-  - var title = 'Главная';
-  - var description = 'Главная страница';
-  - var pageClass = 'index';
-  
-
+extends ../layout/main  
 
 block content
-  
+  <div class="overflow-hidden">
+    <div class="main-banner">
+      <div class="swiper-wrapper ">
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/assets/img/main-banner.png"></source>
+            <img class="main-banner__img">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/assets/img/main-banner.png"></source>
+            <img class="main-banner__img">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/assets/img/main-banner.png"></source>
+            <img class="main-banner__img">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <h2 class="title-style text-center">Новинки</h2>
+    </div>
+  </section>

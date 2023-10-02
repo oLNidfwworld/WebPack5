@@ -1,0 +1,6 @@
+.contacts-row >*:not(:last-child){
+    @apply mb-[20px] 2lg:mr-[80px];
+  }
+  .contacts-row {
+    @apply flex flex-col 2lg:flex-row my-11;
+  }

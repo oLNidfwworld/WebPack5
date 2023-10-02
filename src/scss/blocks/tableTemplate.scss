@@ -1,0 +1,39 @@
+.vtable {
+    @apply sm:max-w-[unset]  overflow-scroll sm:overflow-visible max-w-[298px] 2xl:w-full;
+
+    &__wrapper {
+        @apply grid grid-cols-[125fr_158fr_158fr]  gap-[1px] bg-[#E3E3E3] text-[16px] sm:text-[14px] md:text-[20px] leading-[130%];
+
+        border: 1px solid #E3E3E3;
+
+        >* { /* для каждоый ячейки */
+            @apply px-3 sm:px-2 md:px-3 py-[23px];
+        }
+
+        >* >*{ /* для элементов вложенных в ячейки */
+            @apply flex h-full items-center ;
+        }
+
+        >*:nth-child(3n+5) { /* для 2 столбца не считая шапку */
+            @apply bg-violet text-white;
+        }
+        >*:nth-child(3n+4), /* для 1,3 столбца не считая шапку */
+        >*:nth-child(3n+6)
+         {
+            @apply bg-white;
+        }
+
+        >*:nth-child(3n+2),
+        >*:nth-child(3n+3) { /* для 2,3 столбца  */
+            @apply text-center ;
+            >*{
+                @apply justify-center;
+            }
+        }
+    }
+
+    &__header-cell {
+        @apply bg-[#E3E3E3] font-bold;
+    }
+
+}

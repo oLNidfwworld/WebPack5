@@ -1,0 +1,49 @@
+
+.ticker {
+    &__wrapper{
+        @apply flex;
+    }
+    @apply overflow-hidden;
+    &__main-line, &__copy-line {
+        @apply uppercase text-[20px] sm:text-[24px] leading-[100%] text-[#865286] flex flex-nowrap whitespace-nowrap;
+
+        transition: 0.4s; 
+    }
+
+    &__main-line{
+        animation: run-row 25s infinite linear;
+    }
+    &__copy-line{
+        animation: run-row-copy 25s infinite linear;
+    }
+
+    & span {
+        @apply flex ml-5;
+
+        &::before {
+            @apply mr-6;
+            display: block;
+            height: fit-content;
+            content: url(/src/assets/img/tickerBefore.svg);
+        }
+    }
+}
+
+@keyframes run-row {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-8159px / 2));
+    }
+}
+@keyframes run-row-copy {
+    0% {
+        transform: translateX(calc(8159px / 2));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

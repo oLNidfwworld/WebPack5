@@ -1,0 +1,9 @@
+.info-form {
+    &__wrapper {
+      @apply p-[60px_10px] sm:p-[62px_27px] md:p-[120px_47px_140px_47px] lg:p-[121px_30px_160px_80px] xl:p-[121px_74px_160px_86px] 2xl:p-[140px] bg-[url(/src/assets/img/bg-labs.jpeg)] bg-cover bg-center;
+    }
+  
+    &__description {
+      @apply text-dark-violet text-[14px] sm:text-[20px] md:text-[25px] lg:text-[30px] leading-[120%] tracking-[0.42px] sm:tracking-[0.6px] md:tracking-[0.75px] lg:tracking-[0.9px] mb-[60px];
+    }
+  }

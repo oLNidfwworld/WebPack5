@@ -1,16 +1,12 @@
-/**
- * Variables
-*/
-
-/* Typography */
-/* Breakpoints */
-/* Paths */
-/* Grid setup */
-/* Colour palette */
-:root {
-    --blue: #101E8E;
-    --white: #FFFFFF;
-    --pink: #C8868C;
-    --semi-cyan:#64CBC9; 
+:root{
+    --violet : #B611B6;
+    --dark-violet : #503181; 
+    --dark : #372e37; 
+    --white : #FFFFFF;
+    --blue : #3b3867;
+    --pink : #f299f2;
+    --silver : #e1e2e4;
+} 
+body{
+    color : var(--dark);
 }
-/* Components */

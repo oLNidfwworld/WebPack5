@@ -1,0 +1,49 @@
+
+.objects-examples-item {
+    &s {
+        &__wrapper {
+            @apply grid lg:grid-cols-2 gap-5 ;
+        }
+    }
+
+    &__wrapper {
+        @apply relative grid 2xl:grid-cols-2 gap-[49px] p-[30px] ;
+        transition: 0.4s;
+    }
+
+    &__title{
+        @apply text-[20px] sm:text-[30px] font-semibold leading-[110%] tracking-[0.9px]  mt-5;
+        transition: color 0.4s;
+    }
+    &__index {
+        @apply absolute w-fit h-fit text-[#F299F2] bg-violet text-[30px] leading-[110%] tracking-[0.9px] p-[11px_7px] top-[30px];
+    }
+    &__content{
+        @apply items-center md:items-start flex flex-col  gap-[20px] sm:gap-[40px] lg:gap-[10px] 2lg:flex-row 2xl:flex-col justify-between;
+    }
+    &__pic{
+        @apply 2lg:max-w-[453px] 2xl:max-w-[100%] lg:grayscale;
+        transition: filter 0.3s ;
+        /* @apply aspect-[1/0.9];
+        object-fit: cover;
+        object-position: center; */
+    }
+    &__btn{
+        @apply w-fit h-fit 2lg:self-end lg:opacity-[0];
+        transition: opacity 0.42s;
+    }
+    &:hover{
+        .objects-examples-item__wrapper{
+            @apply lg:bg-white;
+        }
+        .objects-examples-item__btn{
+            @apply opacity-[1];
+        }
+        .objects-examples-item__title{
+            @apply text-violet;
+        }
+        .objects-examples-item__pic{
+            @apply grayscale-0;
+        }
+    }
+}

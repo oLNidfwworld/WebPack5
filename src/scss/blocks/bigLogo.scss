@@ -1,0 +1,52 @@
+.logo-parted{
+    @apply justify-center items-center  grid gap-9 2lg:gap-0   2lg:flex flex-col 2lg:flex-row 2xl:flex-col  h-full 2lg:justify-between;
+}
+.text-logo{
+    @apply max-w-[204px] sm:max-w-[352px] md:max-w-[unset]    2xl:max-w-[246px] 2xl:max-h-[57px];
+}
+.big-logo{
+    @apply max-w-[204px] sm:max-w-[352px] m-auto sm:m-0 md:max-w-[420px] 2lg:mr-9 2xl:mb-9;
+    overflow: visible;
+    g, defs, path {
+        overflow: visible;
+    }
+}
+.part1{
+    animation: anim_part1 9s infinite linear ; 
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes anim_part1 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.part2{
+    animation: anim_part2 9s infinite linear ; 
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes anim_part2 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+.part3{
+    animation: anim_part3 9s infinite linear ; 
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes anim_part3 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

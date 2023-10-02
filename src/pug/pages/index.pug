@@ -1,32 +1,249 @@
 extends ../layout/main  
 
-block content
-  <div class="overflow-hidden">
-    <div class="main-banner">
-      <div class="swiper-wrapper ">
-        <div class="swiper-slide">
-          <picture>
-            <source srcset="/assets/img/main-banner.png"></source>
-            <img class="main-banner__img">
-          </picture>
+block content 
+    <section class="pb-[50px] sm:pb-[60px] lg:pb-[50px] 2xl:pb-[40px] overflow-hidden">
+    <div class="container mb-[30px] sm:mb-[50px] md:mb-25 lg:mb-[218px]">
+      <div class="grid gap-11  2xl:grid-cols-[10fr_5fr]">
+        <div>
+          <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+            <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="1" fill="none">
+            <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+          </svg>
+          <h1 class="section-title-style my-[33px] sm:my-11">
+            | Полный комплекс механизированных работ в <span class="text-violet">промышленных помещениях</span>
+            | квартирах или офисах
+          </h1>
+          <svg class="mb-[33px] sm:mb-11" xmlns="http://www.w3.org/2000/svg" width="70%" height="1" fill="none">
+            <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+          </svg>
+          <p class="section-description-style text-dark-violet">
+            | Даем экспертное заключение лаборатории, проводим независимый анализ качества ведения работ и
+            | осуществляем индивидуальное инженерное сопровождение каждого объекта
+          </p>
         </div>
-        <div class="swiper-slide">
-          <picture>
-            <source srcset="/assets/img/main-banner.png"></source>
-            <img class="main-banner__img">
-          </picture>
-        </div>
-        <div class="swiper-slide">
-          <picture>
-            <source srcset="/assets/img/main-banner.png"></source>
-            <img class="main-banner__img">
-          </picture>
+        <div>
+            include ../includes/bigLogo
         </div>
       </div>
     </div>
-  </div>
-  <section>
-    <div class="container">
-      <h2 class="title-style text-center">Новинки</h2>
+    <div class="container mb-[50px]   md:mb-[70px] lg:mb-[173px] relative 2lg:p-0">
+        include ../includes/awesomeCard
     </div>
-  </section>
+    <div class="">
+        include ../includes/ticker
+    </div>
+    </section>
+    <section class="bg-[#F4F4F4] py-[60px] sm:pt-[140px]  sm:pb-[140px] lg:pb-0 ">
+    <div class="container mb-[100px]">
+      <div class="index-list ">
+        <div class="lg:col-span-2">
+          <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+            <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+          </svg>
+          <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+            <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+          </svg>
+          <h2 class="section-title-style" style="text-wrap:balance">
+            | Компания «Волмикс» специализируется на <span class="text-violet">выполнении полусухой стяжки пола</span>
+          </h2>
+        </div>
+        include ../includes/listIndex
+      </div>
+    </div>
+    <div class="container p-0 sm:px-5 md:px-6 lg:pr-0 2xl:px-[130px]">
+      <div class="flex">
+        <div class="flex ">
+          <svg class='hidden lg:block mr-5' width="1" height="65%" viewBox="0 0 1 65%" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0.5" y1="2.18557e-08" x2="0.499958" y2="65%" stroke="#372E37" />
+          </svg>
+          <svg class='hidden lg:block 2lg:mr-[120px] mr-[50px]' width="1" height="50%" viewBox="0 0 1 50%" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line opacity="0.5" x1="0.5" y1="2.18557e-08" x2="0.499976" y2="50%" stroke="#372E37" />
+          </svg>
+          include ../includes/formCalc
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+    <div class="container">
+      <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+      </svg>
+      <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      <h2 class="section-title-style">
+        | Мы работаем c <span class="text-violet">профессиональными компаниями</span>
+      </h2>
+    </div>
+    <div class="mt-[100px] mb-[50px]">
+        include ../includes/companyCarousel
+    </div>
+    include ../includes/ticker
+    </section>
+    <section class="bg-[#F4F4F4] py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+    <div class="container">
+      <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+      </svg>
+      <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      <h2 class="section-title-style">
+        | Профессиональное оборудование для работы в <span class="text-violet">крайние сроки</span> с <span class="text-violet">большими площадями</span>
+      </h2>
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      include ../includes/equipmentItems
+    </div>
+    </section>
+    <section class="bg-[url(/src/assets/img/bg-labs.jpeg)] bg-cover bg-center py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+    <div class="container">
+      <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+      </svg>
+      <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      <h2 class="section-title-style">
+        | Собственная <span class="text-violet">лаборатория</span>
+      </h2>
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      <p class="section-description-style ">
+        | Аккредитованная испытательная лаборатория выполняет работы по оценке строительных материалов на соответствие
+        | технологическим требованиям и стандартам качества
+      </p> 
+      include ../includes/laboratories
+    </div>
+    </section>
+    <section class="py-[60px] sm:pt-[140px] sm:pb-[60px] lg:pb-[140px]">
+    <div class="container">
+      <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+      </svg>
+      <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      <div class="block 2lg:flex">
+        <h2 class="section-title-style">
+          <span class="text-violet">Как происходит</span> процесс полусухой стяжки пола
+        </h2>
+        <p class="section-subtitle-style max-w-[400px] hidden 2lg:block">Полусухая стяжка пола имеет существенные
+          | преимущества перед классической стяжкой</p>
+      </div>
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+      <div class="grid 2xl:grid-cols-[7fr_6fr] gap-[86px]">
+
+        include ../includes/process
+        <div class="flex">
+        <svg class="hidden lg:blockmr-[90px] 2xl:mr-[60px]" xmlns="http://www.w3.org/2000/svg" width="21" height="219" viewBox="0 0 21 219" fill="none">
+            <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="145" stroke="#B611B6" />
+            <line opacity="0.5" x1="20.5" y1="2.18557e-08" x2="20.5" y2="219" stroke="#B611B6" />
+        </svg>
+        <div>
+            <p class="text-[40px] font-semibold tracking-[1.2px] mb-[60px]"><span class="text-violet">Сравнение</span> стяжки пола</p>
+        include ../includes/tableTemplate
+      </div> 
+    </div>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="flex">
+        <div class="flex mt-[140px] ">
+          <svg class='hidden lg:block mr-5' width="1" height="65%" viewBox="0 0 1 65%" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0.5" y1="2.18557e-08" x2="0.499958" y2="65%" stroke="#372E37" />
+          </svg>
+          <svg class='hidden lg:block 2lg:mr-[120px] mr-[50px]' width="1" height="50%" viewBox="0 0 1 50%" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line opacity="0.5" x1="0.5" y1="2.18557e-08" x2="0.499976" y2="50%" stroke="#372E37" />
+          </svg>
+          <div class="info-form ">
+            <div class="info-form__wrapper">
+              <svg class="mb-5" width="70%" height="1" viewBox="0 0 70% 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line opacity="0.5" y1="0.5" x2="70%" y2="0.5" stroke="#503181" />
+              </svg>
+
+              <svg class=" mb-5 md:mb-10" width="100%" height="1" viewBox="0 0 100% 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+              </svg>
+              <h2 class="mb-5 md:mb-10 section-title-style  ">
+                | У нас работают <span class="text-violet">роботы</span>
+              </h2>
+              <svg class="mb-5 md:mb-10" width="50%" height="1" viewBox="0 0 50% 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="0.5" x2="50%" y2="0.5" stroke="#503181" />
+              </svg>
+              <p class="info-form__description">
+                | Выравнивание и уплотнение при помощи автоматического оборудования повышает производительность в 3-4 раза!
+              </p>
+              <picture>
+                <source srcset="/assets/img/with-robots.png">
+                <img />
+              </picture>
+              <button class="btn preset-2 mt-[87px]"><span>Узнать больше</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-[50px]">
+        include ../includes/ticker
+    </div> 
+    </section>
+    <section class="py-[60px] sm:pt-[70px] sm:pb-[70px] lg:pb-[140px]">
+    <div class="container">
+      <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+      </svg>
+      <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+
+      <div class="block 2lg:flex justify-between">
+        <h2 class="section-title-style">
+          | Наши <span class="text-violet">значимые проекты</span>
+        </h2>
+        <p class="section-subtitle-style max-w-[400px] hidden 2lg:block">Наша гордость и показатель проффессионализма</p>
+      </div>
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg> 
+        include ../includes/projects
+    </div>
+    </section>
+    <section class="py-[60px] sm:pt-[70px] sm:pb-[70px] lg:pb-[140px]">
+    <div class="container">
+      <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+      </svg>
+      <svg class="mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+        <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+      </svg>
+
+      <h2 class="section-title-style">
+        | Наши <span class="text-violet">контакты</span>
+      </h2> 
+      <div>
+        <div class="contacts-row">
+          <a href="" class="text-[16px] sm:text-[24px]">
+          | Москва, Малая Пироговская ул., 12
+          </a>
+          <a href="" class="text-[16px] sm:text-[24px]">
+            | 8 (925) 555-77-88
+          </a>
+          <a class="text-violet underline text-[16px] sm:text-[24px]" артем href="mailto:Info@vollmix.ru">
+            | Info@vollmix.ru
+          </a>
+        </div>
+        <div class="bg-silver min-h-[600px]">
+
+        </div>
+      </div>
+    </div>
+    <VisualTicker class="mt-[140px]"></VisualTicker>
+    </section>

@@ -1,0 +1,27 @@
+.fast-view {
+    &__wrapper {}
+
+    &__pic {
+        @apply aspect-[1/0.7] lg:aspect-[2.33/1] 2xl:aspect-[1/1.06];
+        object-fit: cover;
+        object-position: center center;
+
+        &-container {
+            @apply relative;
+        }
+    }
+
+    &__overlay {
+        @apply absolute left-0 top-0 w-full h-full;
+        &-wrapper{
+            @apply  grid grid-rows-[1fr_auto]   h-full items-center p-[35px] md:p-[50px];
+        }
+        &-icon{
+            @apply w-fit m-auto max-w-[63px] max-h-[63px] sm:max-w-[104px] sm:max-h-[104px];
+        }
+        & p{
+            @apply text-white text-[16px] sm:text-[20px] md:text-[30px] tracking-[0.9px] leading-[120%] font-medium;
+            text-shadow: 1px 1px 4px var(--dark);
+        }
+    }
+}

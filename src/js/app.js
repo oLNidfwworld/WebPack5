@@ -15,14 +15,11 @@ import 'swiper/css/pagination'; //???
 
 // const popupS = require('popups');
 
-
-const swiperPhotos = new Swiper('.main-banner', {
-    // Optional parameters
-    // loop: true,
-    slidesPerView: 1, 
-    // Navigation arrows
-   //  navigation: {
-   //     nextEl: '.swiper-button-next',
-   //     prevEl: '.swiper-button-prev',
-   //  },
- });
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.awesome-card').forEach(el=>{
+    el.addEventListener('mouseenter',(e)=>{ 
+      document.querySelector('.awesome-card--active').classList.remove('awesome-card--active');
+      el.classList.add('awesome-card--active');
+    })
+  })
+})

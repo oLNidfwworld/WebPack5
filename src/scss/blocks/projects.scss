@@ -1,0 +1,28 @@
+
+.projects {
+    &-item{
+        &__texts{
+            @apply sm:flex sm:justify-between md:flex-col 2lg:flex-row mt-[30px];
+        } 
+        &__content{
+            @apply md:ml-6 2xl:ml-[100px];
+        }
+        &__image-row{
+            @apply grid grid-cols-[auto_1fr];
+        }
+        &__pic{
+            @apply max-w-[700px] ;
+        }
+        &__title{
+            @apply text-[18px] sm:ml-2 md:ml-0 2lg:text-[20px] font-semibold tracking-[0.54px] 2lg:tracking-[0.6px] leading-[110%]; 
+        }
+        &__price{
+            @apply text-[30px] sm:text-[40px] font-semibold tracking-[0.9px] sm:tracking-[1.2px] leading-[110%] text-violet ; 
+            white-space: nowrap;
+        }
+    }
+    &__wrapper {
+        @apply grid lg:grid-cols-2   gap-y-[50px] gap-x-[22px];
+        
+    }
+}

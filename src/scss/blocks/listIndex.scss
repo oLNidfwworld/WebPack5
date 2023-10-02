@@ -1,0 +1,35 @@
+
+.index-list {
+    @apply grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-x-[10px] lg:gap-x-[60px] gap-y-[40px] sm:gap-y-[75px] lg:gap-y-[80px] 2lg:lg:gap-y-[110px] 2lg:lg:gap-x-[140px] 2xl:gap-x-[20px] 2xl:gap-y-[100px];
+  }
+.index-list-element{
+    @apply text-[20px] sm:text-[30px] tracking-[0.6px] sm:tracking-[0.9px] text-dark;
+    &__wrapper{
+        @apply relative;
+    }
+    &__stat{
+        @apply flex items-end ;
+        align-self : end;
+    }
+    &__highlighted{
+        @apply text-[33px] sm:text-[60px] 2lg:text-[75px] leading-[74%] tracking-[1.05px] sm:tracking-[1.8px] mr-[12px] font-bold  text-dark-violet;
+    }
+    &__index{
+        @apply h-fit px-[29px] py-[11px] tracking-[0.75px] text-[#F299F2] text-[25px] w-fit leading-[33px];
+        border: 1px #F299F2 solid;
+        align-self: end;
+    }
+    &__info-row{
+        @apply grid grid-cols-[auto_1fr] gap-4 sm:gap-5;
+    }
+    &__description-row{
+        @apply mt-10 grid 2lg:hidden grid-cols-[auto_1fr] gap-5;
+    }
+    &__desc{
+        @apply text-[16px] sm:text-[20px]  lg:text-[24px] leading-[120%] tracking-[0.49px] sm:tracking-[0.6px] lg:tracking-[0.72px];
+        text-wrap : balance;
+    }
+    &__predlog{
+        @apply min-h-[45px] absolute  -top-[8%] sm:-top-[18%] lg:sm:-top-[25%] left-[110px];
+    }
+} 

@@ -1,0 +1,70 @@
+.awesome-wrapper{
+    @apply grid grid-cols-1 gap-[44px] 2lg:grid-cols-2 lg:gap-[261px] 2lg:gap-5  w-full; 
+}
+
+.awesome-card--active{ 
+    
+    &:first-child{
+        @apply 2lg:translate-x-[67px] xl:translate-x-[70px] 2xl:translate-x-[130px] #{!important} ; 
+    }
+    &:last-child{ 
+        @apply 2lg:-translate-x-[67px] xl:-translate-x-[70px] 2xl:-translate-x-[130px] #{!important}; 
+    } 
+    background : var(--violet) !important;
+    
+    .awesome-card__img{
+        @apply md:scale-[1.05];
+        opacity : 1 !important; 
+    }
+
+    .awesome-card__description{
+        @apply visible;
+        grid-template-rows: 1fr;
+    }
+    .awesome-card__description-wrapper{
+        grid-template-rows: 1fr;
+    }
+}
+
+.awesome-card{
+    @apply relative bg-violet md:bg-[#563C7E] min-h-[468px] p-[50px_25px] xl:p-[50px];
+    &__wrapper{
+        @apply grid gap-[22px] md:grid-cols-[2fr_1fr]  lg:grid-cols-[8fr_6fr]; 
+    }
+    &__content{
+        @apply grid gap-[38px];
+    }
+    &__title{
+        @apply text-[20px] sm:text-[30px] md:text-[35px] md:tracking-[1.05px] lg:text-[40px]   sm:tracking-[0.9px]  xl:text-[40px] leading-[110%] tracking-[0.6px]  lg:tracking-[1.2px] text-white font-bold;
+    }
+    &__description{
+        @apply text-[14px] sm:text-[16px] leading-[140%] tracking-[0.48px] text-white  md:invisible;
+        &-wrapper{
+            @apply grid overflow-hidden grid-rows-[1fr] md:grid-rows-[0fr];
+            transition: grid-template-rows 0.7s 0.1s ease-in-out;
+        }
+
+        min-height: 0;
+        transition: visibility 0.8s 0.1s ease-in-out;
+    }
+    &__arrow{
+        @apply ml-5;
+    }
+
+    
+
+    &__img{
+        @apply md:-right-[14%] md:max-w-[376px] lg:max-w-[unset] 2lg:max-w-[569px] xl:max-w-[unset] md:absolute lg:-top-[2%] lg:-right-[28%] xl:-right-[25%] xl:-top-[10%] opacity-[1] md:opacity-[0.6];
+        transition : transform 0.5s 0.2s, opacity 0.5s 0.1s; 
+    }
+    
+
+    &:first-child{
+        @apply 2lg:-translate-x-[67px] xl:-translate-x-[70px] 2xl:-translate-x-[130px] ; 
+    }
+    &:last-child{ 
+        @apply 2lg:translate-x-[67px] xl:translate-x-[70px] 2xl:translate-x-[130px]; 
+    }
+    transition: transform 0.8s ease-in-out;
+} 
+ 

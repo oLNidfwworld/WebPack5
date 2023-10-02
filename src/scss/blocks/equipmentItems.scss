@@ -1,0 +1,64 @@
+
+
+.equipment-item{
+
+    @apply relative;
+  
+    &__wrapper{
+      @apply p-[15px_5px] 2lg:p-[15px_10px] xl:p-5;
+      > *{
+        &:not(:last-child){
+          @apply mb-[15px];
+        }
+      }
+    }
+  
+    &__image-row{
+      @apply flex ;
+    }
+  
+    &__index{
+      @apply p-[9px_8.5px] text-[#F299F2] bg-violet h-fit text-[20px] tracking-[0.6px] leading-[110%] ;
+    }
+    &__href-icon{
+      @apply opacity-0;
+    }
+    &__title{
+      @apply text-[20px] sm:text-[30px]  leading-[110%] tracking-[0.6px] sm:tracking-[0.9px] font-medium;
+    }
+    &__description{
+      @apply text-[14px] sm:text-[16px]  leading-[120%]  tracking-[0.42px] sm:tracking-[0.48px]      ;
+      &-wrapper{
+        @apply grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+      }
+      
+      min-height: 0;
+    }
+    &__pic{
+      @apply ml-[15px] md:ml-5;
+    }
+    &s{
+      &__wrapper{
+        @apply grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-[55px] lg:gap-x-5 lg:gap-y-[62px] 2lg:gap-y-[15px] 2xl:gap-x-5 2xl:gap-y-[110px] ;
+      }
+    }
+    
+    &:hover .equipment-item__wrapper{
+      @apply bg-white absolute left-0 top-0;
+  
+      transition: all 0.4s;
+    }
+    &:hover .equipment-item__description-wrapper{
+      grid-template-rows: 1fr;
+  
+      transition: grid-template-rows 0.4s;
+    }
+    &:hover .equipment-item__href-icon{
+      @apply opacity-[1];
+  
+      transition: opacity 0.4s ;
+    }
+  } 
+  

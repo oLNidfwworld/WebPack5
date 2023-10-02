@@ -1,0 +1,10 @@
+  .callback-form{
+      &__wrapper{
+          @apply p-[22px_10px] sm:p-[62px_27px] md:p-[120px_47px_140px_47px] lg:p-[121px_30px_160px_80px] xl:p-[121px_74px_160px_86px] 2xl:p-[140px];
+          background: linear-gradient(0deg, rgba(52, 24, 94, 0.79) 0%, rgba(52, 24, 94, 0.79) 100%), url(/src/assets/img/popup-form-mask.jpeg), lightgray 50% / cover no-repeat;
+      }
+      &__description{
+          @apply text-white text-[14px] sm:text-[20px] md:text-[25px] lg:text-[30px] leading-[120%] tracking-[0.42px] sm:tracking-[0.6px] md:tracking-[0.75px] lg:tracking-[0.9px] mb-[60px];
+      }
+  }
+  

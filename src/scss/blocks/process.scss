@@ -1,0 +1,25 @@
+.process{
+    &__index{
+        @apply p-[60px_22px_60px_15px] w-fit h-fit text-[40px] font-medium leading-[120%] tracking-[1.2px] mr-5 bg-silver  ;
+    }
+    &__wrapper { 
+        @apply flex ;
+    }
+    &__title{
+        @apply text-[20px] md:text-[25px] lg:text-[30px] font-medium tracking-[0.6px] leading-[120%] md:tracking-[0.75px] lg:tracking-[0.9px];
+    }
+    &__description{
+        @apply text-[14px] sm:text-[16px]   md:text-[20px] lg:text-[24px]   tracking-[0.42px] sm:tracking-[0.48px]  md:tracking-[0.6px] lg:tracking-[0.72px] leading-[120%];
+    }
+    &__content{
+        @apply flex justify-around flex-col;
+    }
+    
+    &es {
+        &__wrapper{
+            & > *:not(:last-child){
+                @apply mb-10;
+            }
+        }
+    }
+}

@@ -5,7 +5,6 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: ["./src/**/*.{pug,html,js}"],
-  important: true,
   purge: false,
   future: {
     removeDeprecatedGapUtilities: true,
@@ -23,33 +22,42 @@ module.exports = {
       height: {
         ...defaultTheme.height,
         fit: 'fit-content'
-      }
+      },
+
+      fontFamily: {
+        'sans': ['Tektur', ...defaultTheme.fontFamily.sans],
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
     },
     container: {
       center: true,
       screens: {
         sm: "100%",
-        md: "100%",
-        // lg: "1280px",
-        // xl: "1400px",
+        md: "100%",  
       }
     },
     screens: {
-      'xs': '320px',
-      'sm': '480px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1440px',
-      '2xl:': '1920px',
+      xs: '100%',
+      sm: '480px',
+      md: '720px',
+      lg: '1024px',
+      '2lg': '1280px',
+      xl: '1440px',
+      '2xl' : '1920px'
     },
     spacing: {
       ...spacingTheme,
     },
     colors: {
-      'blue':'var(--blue)',
-      'pink':'var(--pink)',
-      'white':'var(--white)',
-      'semi-cyan':'var(--semi-cyan)', 
+      'violet': 'var(--violet)',
+      'dark-violet': 'var(--dark-violet)',
+      'dark': 'var(--dark)',
+      'white': 'var(--white)',
+      'blue': 'var(--blue)',
+      'pink': 'var(--pink)',
+      'silver': 'var(--silver)',
     },
     borderColor: {
       ...colorTheme,
@@ -62,29 +70,80 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         '.container': {
-          // maxWidth: '100%',
-          margin:'auto',
-          // padding:'0 5px',
-          // '@screen xs': {
-          //   maxWidth: '100%',
-          //   padding:'0 15px'
-          // },
-          // '@screen sm': {
-          //   maxWidth: '480px',
-          //   padding:'0 15px'
-          // },
-          // '@screen md': {
-          //   maxWidth: '768px',
-          // },
-          // '@screen lg': {
-          //   maxWidth: '980px', 
-          // },
-          '@screen xl': {
-            maxWidth: '1602px',
-            paddingLeft : '2%',
-            paddingRight : '2%', 
+          maxWidth: '100%',
+          margin:'auto', 
+          padding:'0 11px', 
+          '@screen sm': {
+            maxWidth: '480px',
+            padding:'0 21px'
+          },
+          '@screen md': {
+            maxWidth: '720px',
+            padding: '0 27px',
+          },
+          '@screen lg': {
+            maxWidth: '1024px', 
+            padding: '0 43px',
+          },
+          '@screen 2lg': {
+            maxWidth: '1280px', 
+            padding: '0 67px', 
           }, 
-        }
+          '@screen xl': {
+            maxWidth: '1440px', 
+            padding: '0 70px', 
+          }, 
+          '@screen 2xl': {
+            maxWidth: '1920px', 
+            padding: '0 130px', 
+          }, 
+        },
+
+        '.section-title-style' : {
+          fontSize : '20px',
+          lineHeight : '110%',
+          letterSpacing : '0.6px',
+          fontWeight: '600',
+          textWrap: 'balance',
+          color : 'var(--dark-violet)',
+          textWrap : 'balance',
+          '@screen sm': {
+            fontSize : '35px',
+            letterSpacing : '1.05px',
+          },
+          '@screen md': {
+            fontSize : '50px',
+            letterSpacing : '1.5px',
+          },
+          '@screen lg': {
+            fontSize : '60px',
+            letterSpacing : '1.8px',
+          },
+        },
+        '.section-description-style' : {
+          fontSize : '14px',
+          lineHeight : '120%',
+          letterSpacing : '0.48px',
+          textWrap : 'balance',
+          '@screen sm': {
+            fontSize : '16px',
+            letterSpacing : '1.05px',
+          },
+          '@screen md': {
+            fontSize : '25px',
+            letterSpacing : '0.75px',
+          },
+          '@screen lg': {
+            fontSize : '30px',
+            letterSpacing : '0.9px',
+          },
+        },
+        '.section-subtitle-style' : {
+          fontSize : '24px',
+          lineHeight : '120%',
+          letterSpacing : '0.72px',
+          textWrap : 'balance',
+        },
       })
     })
   ],

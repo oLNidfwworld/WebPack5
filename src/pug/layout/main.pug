@@ -14,9 +14,12 @@ html(lang='en')
 
   body(class="debug-screens")
     .wrapper
+
+      <div class="bg-podlozhka" /> 
+      include ../includes/header
       .wrapper-page
-        include ../includes/header
         .wrapper-content
-          block content
-        include ../includes/footer
+          main 
+            block content
+      include ../includes/footer
     block script

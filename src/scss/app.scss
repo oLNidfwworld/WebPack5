@@ -44,6 +44,7 @@
 @import 'blocks/equipmentItemsWithChars';
 @import 'blocks/tableTemplate';
 @import 'blocks/simpleList';
+@import 'blocks/giveMark';
 @import 'blocks/footer'; 
 @import "@fancyapps/ui/dist/fancybox.css";
 /* Pages styles */
@@ -60,6 +61,11 @@
 // @import url("choices.js/public/assets/styles/choices.css");
 // @import url("choices.js/public/assets/styles/choices.min.css");
 
+
+html{
+  scroll-behavior:smooth;
+}
+
 .wrapper {
     &-page{
         @apply pt-[33px] sm:pt-[60px] md:pt-[100px] 2lg:pt-[126px]  ;
@@ -71,12 +77,50 @@
 }
 
 .bg-podlozhka{
-    @apply w-full h-[4000px] md:h-[2600px] 2lg:h-[2000px];
-    background: url(/src/assets/img/main-banner-bg.jpg); 
-    background-position: right;
-    z-index: -1;
-    background-size: cover;
-    position: absolute;
+  @apply w-full h-[4000px] md:h-[2600px] 2lg:h-[2000px];
+  background: url(/src/assets/img/main-banner-bg.jpg); 
+  background-position: right;
+  z-index: -1;
+  background-size: cover;
+  position: absolute;
+  animation: hopHeyOpacity 5s infinite;
+}
+@keyframes hopHeyOpacity {
+  0% {
+    opacity:  1;
+  }
+
+  15% {
+    opacity: 0.6;
+  } 
+
+  30% {
+    opacity: 0.4;
+  }
+
+  45% {
+    opacity: 0;
+  } 
+
+  65% {
+    opacity: 0.4;
+  } 
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.bg-podlozhclone{
+  @apply w-full h-[4000px] md:h-[2600px] 2lg:h-[2000px];
+  background: #e9e9eb;
+  background-position: right;
+  z-index: -2;
+  background-size: cover;
+  position: absolute;
 }
 
 input.toggler__hidden:checked + label.toggler__label .toggler__switch{

@@ -1,0 +1,47 @@
+.e404{
+    @apply relative grid gap-[30px] lg:block;
+    &__left-block{
+        @apply flex flex-col gap-5 lg:max-w-[461px] 2lg:max-w-[558px] xl:max-w-[680px];
+    }
+    &__code{
+        @apply text-[144px]  sm:text-[199px] font-semibold tracking-[6px] leading-[110%];
+    }
+    &__david{
+        @apply aspect-[426/694] max-w-[100%] sm:max-w-[355px] 2lg:max-w-[426px]  m-auto relative  lg:absolute sm:-right-[50px] md:right-[10px] 2lg:right-[60px] 2xl:right-[130px] top-[20px];
+        z-index: 2;
+    }
+    &__glasses{
+        @apply absolute sm:right-[50px] lg:right-[70px] md:right-[230px] 2lg:right-[125px] 2xl:right-[200px] right-[17%] top-[33%] max-w-[65%] sm:top-[196px] sm:max-w-[225px] 2lg:top-[225px] 2lg:max-w-[271px];
+        z-index: 3;
+        transform: rotate(3.21deg);
+        animation: MAKEMLGFACE 2s ease-in-out;
+    }
+    &__circle{
+        @apply absolute md:right-[130px] lg:right-[10px] 2lg:right-[50px] 2xl:right-[120px] sm:top-[50px]  lg:top-[128px] top-[20%] w-[100%] sm:w-[459px] 2lg:w-[546px];  
+        z-index: 1;  
+        animation: e404CircleRotate 30s linear infinite;
+    }
+    &__right-block{
+        @apply relative lg:static;
+    }
+}
+@keyframes MAKEMLGFACE {
+    0%{
+        opacity: 0;
+        transform: translateY(-200px) rotate(0deg);
+    }
+    75%{ 
+        opacity: 1; 
+    }
+    100%{ 
+        transform: translateY(0px) rotate(3.21deg);
+    }
+}
+@keyframes e404CircleRotate {
+    0% {
+        transform: rotate(0deg) ;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

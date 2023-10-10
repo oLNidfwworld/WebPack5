@@ -55,9 +55,11 @@ module.exports = {
       'dark-violet': 'var(--dark-violet)',
       'dark': 'var(--dark)',
       'white': 'var(--white)',
+      'vwhite': 'var(--vwhite)',
       'blue': 'var(--blue)',
       'pink': 'var(--pink)',
       'silver': 'var(--silver)',
+      'header-text-var': 'var(--header-text-var)'
     },
     borderColor: {
       ...colorTheme,
@@ -67,6 +69,9 @@ module.exports = {
     },  
   },
   plugins: [
+
+    require('@tailwindcss/line-clamp'),
+
     plugin(function ({ addComponents }) {
       addComponents({
         '.container': {

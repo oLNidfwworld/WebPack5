@@ -6,7 +6,9 @@ const colorTheme = {
   'blue': 'var(--blue)',
   'pink': 'var(--pink)',
   'silver': 'var(--silver)',
-  }
+  'header-text-var': 'var(--header-text-var)',
+  'vwhite': 'var(--vwhite)',
+}
   
   const spacingTheme = Array(31).fill(null)
     .reduce((acc, _, index) => ({ ...acc, ...{ [index]: `${(index) * 4}px` } }), {});
@@ -14,4 +16,4 @@ const colorTheme = {
   module.exports = {
     colorTheme,
     spacingTheme,
-  }
+}

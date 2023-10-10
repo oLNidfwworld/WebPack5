@@ -45,6 +45,9 @@
 @import 'blocks/tableTemplate';
 @import 'blocks/simpleList';
 @import 'blocks/giveMark';
+@import 'blocks/blogDetail';
+@import 'blocks/e404';
+@import 'blocks/blog';
 @import 'blocks/footer'; 
 @import "@fancyapps/ui/dist/fancybox.css";
 /* Pages styles */
@@ -75,7 +78,6 @@ html{
         min-height: 100vh;
     }
 }
-
 .bg-podlozhka{
   @apply w-full h-[4000px] md:h-[2600px] 2lg:h-[2000px];
   background: url(/src/assets/img/main-banner-bg.jpg); 
@@ -234,3 +236,4 @@ input.toggler__hidden:checked + label.toggler__label .toggler__switch{
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='26' viewBox='0 0 25 26' fill='none'%3E%3Cpath d='M3.75817 0.707031L25 0.707031L25 22.1318H17.4837V13.4334L5.31485 25.707L0 20.3464L11.9553 8.28811L3.75817 8.28811L3.75817 0.707031Z' fill='%23B611B6'/%3E%3C/svg%3E");
     }
   }
+

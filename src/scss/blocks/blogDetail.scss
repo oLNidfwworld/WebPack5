@@ -1,0 +1,17 @@
+.blog-detail{
+    &__wrapper{
+        @apply grid 2xl:grid-cols-[auto_540px] xl:grid-cols-[auto_420px] 2lg:grid-cols-[auto_370px] lg:grid-cols-[auto_299px] gap-6 ;
+    }
+    & p{
+        @apply text-[20px] leading-[28px] tracking-[0.6px] mb-[50px];
+    }
+    & h2{
+        @apply text-[30px] mb-[30px] font-semibold leading-[110%] tracking-[0.9px];
+    }
+    & img{
+        @apply mb-[50px];
+    }
+    &__additional{
+        @apply hidden lg:block;
+    }
+}

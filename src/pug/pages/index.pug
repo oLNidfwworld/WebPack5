@@ -1,41 +1,47 @@
-extends ../layout/main  
+extends ../layout/main   
+ 
+block variables
+    - var title = 'Стяжка';
+    - var description = '';
+    - var pageClass = '';
+    - var podlozhka = true
 
 block content 
     <section class="pb-[50px] sm:pb-[60px] lg:pb-[50px] 2xl:pb-[40px] overflow-hidden">
-    <div class="container mb-[30px] sm:mb-[50px] md:mb-25 lg:mb-[218px]">
-      <div class="grid gap-11  2xl:grid-cols-[10fr_5fr]">
-        <div>
-          <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
-            <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="1" fill="none">
-            <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
-          </svg>
-          <h1 class="section-title-style my-[33px] sm:my-11">
-            | Полный комплекс механизированных работ в <span class="text-violet">промышленных помещениях</span>
-            | квартирах или офисах
-          </h1>
-          <svg class="mb-[33px] sm:mb-11" xmlns="http://www.w3.org/2000/svg" width="70%" height="1" fill="none">
-            <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
-          </svg>
-          <p class="section-description-style text-dark-violet">
-            | Даем экспертное заключение лаборатории, проводим независимый анализ качества ведения работ и
-            | осуществляем индивидуальное инженерное сопровождение каждого объекта
-          </p>
-        </div>
-        <div>
-            include ../includes/bigLogo
+      <div class="container mb-[30px] sm:mb-[50px] md:mb-25 lg:mb-[218px]">
+        <div class="grid gap-11  2xl:grid-cols-[10fr_5fr]">
+          <div>
+            <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+              <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="1" fill="none">
+              <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+            </svg>
+            <h1 class="section-title-style my-[33px] sm:my-11">
+              | Полный комплекс механизированных работ в <span class="text-violet">промышленных помещениях</span>
+              | квартирах или офисах
+            </h1>
+            <svg class="mb-[33px] sm:mb-11" xmlns="http://www.w3.org/2000/svg" width="70%" height="1" fill="none">
+              <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+            </svg>
+            <p class="section-description-style text-dark-violet">
+              | Даем экспертное заключение лаборатории, проводим независимый анализ качества ведения работ и
+              | осуществляем индивидуальное инженерное сопровождение каждого объекта
+            </p>
+          </div>
+          <div>
+              include ../includes/bigLogo
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container mb-[50px]   md:mb-[70px] lg:mb-[173px] relative 2lg:p-0">
-        include ../includes/awesomeCard
-    </div>
-    <div class="">
-        include ../includes/ticker
-    </div>
+      <div class="container mb-[50px]   md:mb-[70px] lg:mb-[173px] relative 2lg:p-0">
+          include ../includes/awesomeCard
+      </div>
+      <div class="">
+          include ../includes/ticker
+      </div>
     </section>
-    <section class="bg-[#F4F4F4] py-[60px] sm:pt-[140px]  sm:pb-[140px] lg:pb-0 ">
+    <section class="bg-vwhite py-[60px] sm:pt-[140px]  sm:pb-[140px] lg:pb-0 ">
     <div class="container mb-[100px]">
       <div class="index-list ">
         <div class="lg:col-span-2">
@@ -66,7 +72,7 @@ block content
       </div>
     </div>
     </section>
-    <section class="py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+    <section class="py-[60px] bg-white sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
     <div class="container">
       <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
         <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
@@ -83,7 +89,7 @@ block content
     </div>
     include ../includes/ticker
     </section>
-    <section class="bg-[#F4F4F4] py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+    <section class="bg-vwhite py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
     <div class="container">
       <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
         <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
@@ -100,7 +106,7 @@ block content
       include ../includes/equipmentItems
     </div>
     </section>
-    <section class="bg-[url(/src/assets/img/bg-labs.jpeg)] bg-cover bg-center py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+    <section class="bg-[url(/src/assets/img/bg-labs.jpeg)] bg-white bg-cover bg-center py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
     <div class="container">
       <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
         <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
@@ -121,7 +127,7 @@ block content
       include ../includes/laboratories
     </div>
     </section>
-    <section class="py-[60px] sm:pt-[140px] sm:pb-[60px] lg:pb-[140px]">
+    <section class="py-[60px] sm:pt-[140px] bg-white sm:pb-[60px] lg:pb-[140px]">
     <div class="container">
       <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
         <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
@@ -195,7 +201,7 @@ block content
         include ../includes/ticker
     </div> 
     </section>
-    <section class="py-[60px] sm:pt-[70px] sm:pb-[70px] lg:pb-[140px]">
+    <section class="py-[60px] sm:pt-[70px] bg-white sm:pb-[70px] lg:pb-[140px]">
     <div class="container">
       <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
         <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
@@ -216,7 +222,7 @@ block content
         include ../includes/projects
     </div>
     </section>
-    <section class="py-[60px] sm:pt-[70px] sm:pb-[70px] lg:pb-[140px]">
+    <section class="py-[60px] bg-white sm:pt-[70px] sm:pb-[70px] lg:pb-[140px]">
     <div class="container">
       <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
         <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
@@ -245,5 +251,7 @@ block content
         </div>
       </div>
     </div>
-    <VisualTicker class="mt-[140px]"></VisualTicker>
+    <div class="mt-[140px]">
+      
+    </div>
     </section>

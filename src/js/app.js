@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       scrollTrigger : {
         trigger: el,
         start: `-${randInt(120,150)}px 70%`, 
-        markers : true,
+        markers : false,
         end: `${randInt(100,130)}px 70%`,
         scrub : randInt(1,2),
         once : true, 
@@ -63,5 +63,29 @@ document.addEventListener('DOMContentLoaded',()=>{
     el.classList.add(activePagenClass);
 
   }))
+
+  document.querySelectorAll('*[data-typing-text]').forEach(el=>{
+    el.innerHTML = ''; 
+
+    let typingWordDelay = 600;
+    let typingCaret = '_';
+
+
+    let timing = 0;
+    let arraySize = el.dataset.typingText.split('').length;
+    el.dataset.typingText.split('').map((char,i) => {
+      setTimeout(()=>{
+        console.log(i)
+        if(i==0){ 
+          el.innerHTML += char + typingCaret;
+        }else if(i!==0 && i!==arraySize-1){
+          el.innerHTML = el.innerHTML.slice(0,-1) + char + typingCaret;
+        }else{
+          el.innerHTML = el.innerHTML.slice(0,-1) + char
+        }
+      },timing)
+      timing += typingWordDelay;
+    })
+  })
 
 })

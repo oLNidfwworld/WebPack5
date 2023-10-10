@@ -1,4 +1,4 @@
-include ../mixins/mixins
+include ../mixins/mixins  
 block variables
 
 doctype html
@@ -15,8 +15,15 @@ html(lang='en')
   body(class="debug-screens")
     .wrapper
 
-      <div class="bg-podlozhka" ></div> 
-      <div class="bg-podlozhclone" ></div> 
+      if podlozhka == true 
+        <div class="bg-podlozhka" ></div> 
+        <div class="bg-podlozhclone" ></div>
+      else 
+         style(type='text/css').
+          header{background: url(/assets/img/header-bg.jpeg);background-size: contain; background-color: var(--dark-violet); animation: headerRun linear 50s infinite;}
+          .hdr__wrapper{padding-bottom:56px;}
+          :root{--header-text-var: #FFFFFF;}
+          .wrapper-page{background: var(--vwhite);}
       include ../includes/header
       .wrapper-page
         .wrapper-content

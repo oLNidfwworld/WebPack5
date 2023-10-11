@@ -1,0 +1,73 @@
+extends ../layout/main
+block variables
+    - var title = '404';
+    - var description = '';
+    - var pageClass = '';
+    - var podlozhka = true
+
+block content 
+    <section class="pb-[50px] sm:pb-[60px] lg:pb-[50px] 2xl:pb-[40px] overflow-hidden">
+        <div class="container mb-[90px]  lg:mb-[104px]">
+            <div class="grid gap-11  2xl:grid-cols-[10fr_5fr]">
+                <div>
+                    <svg class="mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+                        <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+                    </svg>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="100%" height="1" fill="none">
+                        <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+                    </svg>
+                    <h1 class="section-title-style my-[33px] sm:my-11">
+                        | Наливной пол механизированным способом   <span class="text-violet">повышает производительность в 3-4 раза!</span>  
+                    </h1>
+                    <svg class="mb-[33px] sm:mb-11" xmlns="http://www.w3.org/2000/svg" width="70%" height="1" fill="none">
+                        <line y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+                    </svg>
+                    <p class="section-description-style text-dark-violet">
+                        | Рабочая смесь наносится под давлением, с помощью насосных станций, что обеспечивает более высокую адгезию, увеличивает скорость проведения работ.
+                    </p>
+                    <button class="btn preset-2 mt-[60px]"><span>Заказать  <span class="hidden sm:inline">наливной пол</span></span>
+                    </button>
+                </div>
+                <div class="self-end">
+                    include ../includes/fastView
+                </div>
+            </div>
+        </div>
+        <div class="">
+            include ../includes/ticker
+        </div>
+    </section>
+    <section class="bg-vwhite py-[60px] sm:pt-[140px] sm:pb-[100px] lg:pb-[140px]">
+        <div class="container">
+            <svg class=" scrollTrg mb-5" xmlns="http://www.w3.org/2000/svg" width="40%" height="1" fill="none">
+                <line opacity="0.5" y1="0.5" x2="100%" y2="0.5" stroke="#503181" />
+            </svg>
+            <svg class="scrollTrg mb-10" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+                <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+            </svg>
+                <h2 class="section-title-style">
+                    |  <span class="text-violet">Виды наливных полов,</span> выполняемы компанией «Воллмикс» 
+                </h2>
+            <svg class="my-10 scrollTrg" xmlns="http://www.w3.org/2000/svg" width="90%" height="1" fill="none">
+                <line y1="0.5" x2="90%" y2="0.5" stroke="#503181" />
+            </svg>
+            <div class="mt-[50px] sm:mt-[100px] mb-[140px]">
+                include ../includes/vidiRabot
+            </div>
+
+        </div>
+
+        <div class="container p-0 sm:px-5 md:px-6 lg:pr-0 2xl:px-[130px]">
+            <div class="flex">
+                <div class="flex ">
+                    <svg class='hidden lg:block mr-5' width="1" height="65%" viewBox="0 0 1 65%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.5" y1="2.18557e-08" x2="0.499958" y2="65%" stroke="#372E37" />
+                    </svg>
+                    <svg class='hidden lg:block 2lg:mr-[120px] mr-[50px]' width="1" height="50%" viewBox="0 0 1 50%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line opacity="0.5" x1="0.5" y1="2.18557e-08" x2="0.499976" y2="50%" stroke="#372E37" />
+                    </svg>
+                    include ../includes/formCalc
+                </div>
+            </div>
+        </div>
+    </section> 

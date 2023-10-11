@@ -87,5 +87,35 @@ document.addEventListener('DOMContentLoaded',()=>{
       timing += typingWordDelay;
     })
   })
+  
+  document.querySelector('#goUp').addEventListener('click',()=>scrollTo(0,0))
+
+  const shadowElement = document.querySelector('#shadow');
+
+  const hideBurger = () => { 
+    document.querySelector('.burger').classList.remove('burger--hidden');
+    shadowElement.classList.remove('shadow--show');
+    document.body.style.overflow = 'initial';
+  }
+
+  document.querySelector('#burger-opener').addEventListener('click',()=>{
+    document.querySelector('.burger').classList.add('burger--hidden');
+    shadowElement.classList.add('shadow--show');
+    shadowElement.addEventListener('click',()=>{
+      hideBurger();
+      removeEventListener(shadowElement, hideBurger)
+    });
+    document.body.style.overflow = 'hidden';
+  })
+
+  document.querySelector('#burger-close').addEventListener('click',()=>{
+    hideBurger() 
+    removeEventListener(shadowElement, hideBurger)
+  })
+
+  document.querySelector('#test').addEventListener('load',()=>{
+    console.log('loaded');
+  })
+  
 
 })

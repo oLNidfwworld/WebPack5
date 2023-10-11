@@ -14,14 +14,18 @@ html(lang='en')
 
   body(class="debug-screens")
     .wrapper
-
+      <div id="shadow"></div>
+      include ../includes/burgeer
       if podlozhka == true 
         <div class="bg-podlozhka" ></div> 
         <div class="bg-podlozhclone" ></div>
+        style(type='text/css').
+          .wrapper-page{
+            padding-bottom: 0 !important;
+          }
       else 
          style(type='text/css').
-          header{background: url(/assets/img/header-bg.jpeg);background-size: contain; background-color: var(--dark-violet); animation: headerRun linear 50s infinite;}
-          .hdr__wrapper{padding-bottom:56px;}
+          header{background: url(/assets/img/header-bg.jpeg);background-size: contain; background-color: var(--dark-violet); animation: headerRun linear 300s infinite;}
           :root{--header-text-var: #FFFFFF;}
           .wrapper-page{background: var(--vwhite);}
       include ../includes/header

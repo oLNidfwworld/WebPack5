@@ -1,0 +1,30 @@
+.work-type{
+    &__wrapper{
+        @apply grid grid-cols-2 gap-y-[60px] gap-x-[20px];
+    }
+    &__element{
+        @apply grid grid-cols-[auto_1fr] gap-10;
+
+        &-count{
+            @apply text-[#F299F2] p-3 text-[30px] leading-[110%] tracking-[0.9px] mb-5;
+            border: 1px solid var(--violet);
+        }
+        &-title{
+            @apply text-[40px] text-dark-violet font-semibold tracking-[0.03em];
+
+        }
+        &-content{
+            @apply grid gap-5;
+        }
+        &-img{
+            @apply aspect-[297/191] max-w-[297px];
+        }
+        &-desc{
+            @apply text-[24px] leading-[120%]   tracking-[0.03em];
+        }
+
+        &:last-child:last-child:nth-child(2n+1){
+            @apply col-span-2;
+        }
+    }
+}

@@ -39,12 +39,14 @@
 @import 'blocks/infoForm';
 @import 'blocks/projects';
 @import 'blocks/contacts';
+@import 'blocks/burgeer';
 @import 'blocks/fastView';
 @import 'blocks/objectExamples';
 @import 'blocks/equipmentItemsWithChars';
 @import 'blocks/tableTemplate';
 @import 'blocks/simpleList';
 @import 'blocks/giveMark';
+@import 'blocks/workType';
 @import 'blocks/blogDetail';
 @import 'blocks/e404';
 @import 'blocks/blog';
@@ -71,7 +73,7 @@ html{
 
 .wrapper {
     &-page{
-        @apply pt-[33px] sm:pt-[60px] md:pt-[100px] 2lg:pt-[126px]  ;
+        @apply pb-[30px] sm:pb-[50px] pt-[33px] sm:pt-[60px] md:pt-[100px] 2lg:pt-[126px]  ;
         min-height: 100vh;
     }
     &-content{
